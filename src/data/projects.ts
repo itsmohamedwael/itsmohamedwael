@@ -123,8 +123,8 @@ export const projectsData: Project[] = [
     role: "Creative Director & Visual Designer",
     summary:
       "A comprehensive visual identity, typographic guideline, and motion design language rooted in Japanese minimalism and architectural restraint.",
-    videoSrc: "/videos/brand-identity.mp4",
-    posterSrc: "/videos/posters/poster-brand-identity.jpg",
+    videoSrc: "/videos/zen-brand.mp4",
+    posterSrc: "/videos/posters/poster-zen-brand.jpg",
     technologies: [
       "Typographic Hierarchy",
       "Editorial Grid Systems",
@@ -158,8 +158,8 @@ export const projectsData: Project[] = [
     role: "Embedded Hardware & Firmware Engineer",
     summary:
       "An autonomous two-wheel robotics platform featuring real-time ultrasonic spatial sonar scanning, dynamic obstacle avoidance algorithms, and dual H-bridge motor kinematics.",
-    videoSrc: "/videos/arduino-navigator.mp4",
-    posterSrc: "/videos/posters/poster-arduino-navigator.jpg",
+    videoSrc: "/videos/commercial-cinematic.mp4",
+    posterSrc: "/videos/posters/poster-commercial-cinematic.jpg",
     technologies: [
       "C++ / Embedded C",
       "Arduino Microcontroller",

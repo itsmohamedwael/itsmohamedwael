@@ -1,44 +1,15 @@
 "use client";
 
 import React from "react";
-import { motion } from "motion/react";
 import { ObserverAvatar } from "../character/ObserverAvatar";
 import { profileData } from "../../data/profile";
 
 export function EditorialHero() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.12,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.85, ease: [0.16, 1, 0.3, 1] as const },
-    },
-  };
-
   return (
     <section className="relative min-h-screen w-full bg-black text-white pt-32 pb-20 px-6 sm:px-10 flex flex-col justify-between overflow-hidden border-b border-neutral-900">
       {/* Top Editorial Grid Index */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="w-full max-w-7xl mx-auto"
-      >
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900 pb-5 font-mono text-[11px] text-neutral-500 uppercase tracking-widest"
-        >
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-neutral-900 pb-5 font-mono text-[11px] text-neutral-500 uppercase tracking-widest">
           <div className="flex items-center gap-2">
             <span className="text-white">FOLIO 2026—2027</span>
             <span className="text-neutral-700">/</span>
@@ -51,12 +22,12 @@ export function EditorialHero() {
           <div className="hidden md:block">
             <span>COORDINATES: 30.0444° N, 31.2357° E</span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Central Asymmetric Hero Composition */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pt-12 lg:pt-16">
           {/* Monumental Editorial Typography (7 columns) */}
-          <motion.div variants={itemVariants} className="lg:col-span-7 flex flex-col">
+          <div className="lg:col-span-7 flex flex-col">
             <span className="font-mono text-xs tracking-widest text-neutral-500 uppercase mb-3">
               // DIGITAL ARCHITECT &amp; RESEARCH SCHOLAR
             </span>
@@ -87,13 +58,10 @@ export function EditorialHero() {
                 Read Monograph
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Integrated Interactive Character Stage (5 columns) */}
-          <motion.div
-            variants={itemVariants}
-            className="lg:col-span-5 flex flex-col items-center justify-center relative"
-          >
+          <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
             {/* Ambient Deep Glow Anchor */}
             <div className="absolute -inset-4 bg-radial from-neutral-900/60 to-transparent blur-2xl pointer-events-none rounded-full" />
 
@@ -109,17 +77,12 @@ export function EditorialHero() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Bottom Editorial Meta Bar */}
-      <motion.div
-        variants={itemVariants}
-        initial="hidden"
-        animate="visible"
-        className="w-full max-w-7xl mx-auto pt-16 border-t border-neutral-900 mt-16 flex flex-col sm:flex-row sm:items-end justify-between gap-6 font-mono text-xs text-neutral-500"
-      >
+      <div className="w-full max-w-7xl mx-auto pt-16 border-t border-neutral-900 mt-16 flex flex-col sm:flex-row sm:items-end justify-between gap-6 font-mono text-xs text-neutral-500">
         <div className="flex flex-col gap-1">
           <span className="text-[10px] text-neutral-600 uppercase tracking-widest">
             CORE DISCIPLINE
@@ -143,7 +106,7 @@ export function EditorialHero() {
             <span>↓</span>
           </a>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
