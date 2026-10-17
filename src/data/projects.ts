@@ -37,7 +37,7 @@ export const projectsData: Project[] = [
       "Multi-step desktop workflows triggered via natural conversational speech.",
       "Proactive anomaly detection module monitoring background system processes.",
     ],
-    liveUrl: "https://itsmohamedwael.info/",
+    liveUrl: "https://www.itsmohamedwael.info/",
     githubUrl: "https://github.com/itsmohamedwael",
   },
   {
@@ -75,7 +75,7 @@ export const projectsData: Project[] = [
       "High-contrast ergonomic UI designed specifically for extreme, high-stress kitchen environments.",
       "Instant multi-station ticket synchronization across prep lines.",
     ],
-    liveUrl: "https://itsmohamedwael.info/",
+    liveUrl: "https://www.itsmohamedwael.info/",
   },
   {
     slug: "creator-affiliate-platform",
@@ -112,7 +112,7 @@ export const projectsData: Project[] = [
       "Automated multi-currency payout processing eliminating manual spreadsheets.",
       "Live conversion rate telemetry and fraud-resistant referral token verification.",
     ],
-    liveUrl: "https://itsmohamedwael.info/",
+    liveUrl: "https://www.itsmohamedwael.info/",
   },
   {
     slug: "zen-brand-identity",
@@ -147,7 +147,7 @@ export const projectsData: Project[] = [
       "Unified brand voice across digital touchpoints, typography, and motion.",
       "Standardized design token architecture implemented across web interfaces.",
     ],
-    liveUrl: "https://itsmohamedwael.info/",
+    liveUrl: "https://www.itsmohamedwael.info/",
   },
   {
     slug: "arduino-obstacle-navigator",
@@ -183,6 +183,6 @@ export const projectsData: Project[] = [
       "Continuous autonomous locomotion in densely cluttered spaces.",
       "Hardware-level motor braking preventing physical collisions at maximum speed.",
     ],
-    liveUrl: "https://itsmohamedwael.info/",
+    liveUrl: "https://www.itsmohamedwael.info/",
   },
 ];

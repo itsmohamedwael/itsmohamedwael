@@ -5,7 +5,7 @@
 <div align="center">
 
   <p align="center">
-    <a href="https://itsmohamedwael.info">
+    <a href="https://www.itsmohamedwael.info">
       <img src="assets/mw-logo-white.png#gh-dark-mode-only" alt="Mohamed Wael Monogram" width="185" style="filter: drop-shadow(0 0 24px rgba(0, 212, 255, 0.45)); margin-bottom: 10px;" />
       <img src="assets/mw-logo-dark.png#gh-light-mode-only" alt="Mohamed Wael Monogram" width="185" style="filter: drop-shadow(0 0 16px rgba(0, 0, 0, 0.15)); margin-bottom: 10px;" />
     </a>
@@ -29,14 +29,14 @@
   </p>
 
   <p align="center">
-    <a href="https://itsmohamedwael.info"><img src="https://img.shields.io/badge/Portfolio-itsmohamedwael.info-00D4FF?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Portfolio" /></a>
+    <a href="https://www.itsmohamedwael.info"><img src="https://img.shields.io/badge/Portfolio-www.itsmohamedwael.info-00D4FF?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Portfolio" /></a>
     <a href="https://github.com/itsmohamedwael"><img src="https://img.shields.io/badge/GitHub-itsmohamedwael-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
     <a href="mailto:mohamed261207@bue.edu.eg"><img src="https://img.shields.io/badge/Email-Get%20In%20Touch-00FF88?style=for-the-badge&logo=gmail&logoColor=black" alt="Email" /></a>
     <a href="https://komarev.com/ghpvc/?username=itsmohamedwael&color=00d4ff&style=for-the-badge"><img src="https://komarev.com/ghpvc/?username=itsmohamedwael&color=00d4ff&style=for-the-badge" alt="Profile Views" /></a>
   </p>
 
   <p align="center">
-    <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info" target="_blank" rel="noopener noreferrer">
+    <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5" target="_blank" rel="noopener noreferrer">
       <img src="assets/tip-button.svg" alt="☕ Leave a Tip on Lava.top" height="46" style="margin-top: 4px;"/>
     </a>
   </p>
@@ -68,11 +68,11 @@
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">💼 <a href="https://itsmohamedwael.info/unlock">ORYVEO — POS &amp; Growth Suite</a></h3>
+      <h3 align="center">💼 <a href="https://www.itsmohamedwael.info/unlock">ORYVEO — POS &amp; Growth Suite</a></h3>
       <p align="center">
         <img src="https://img.shields.io/badge/Status-🔒%20Locked-FF416C?style=flat-square" />
         <img src="https://img.shields.io/badge/Price-%2420%20(%2410%20with%20code)-00FF88?style=flat-square" />
-        <a href="https://itsmohamedwael.info/unlock"><img src="https://img.shields.io/badge/Unlock-Enter%20PIN-00D4FF?style=flat-square&logo=1password&logoColor=white" alt="Enter PIN" /></a>
+        <a href="https://www.itsmohamedwael.info/unlock"><img src="https://img.shields.io/badge/Unlock-Enter%20PIN-00D4FF?style=flat-square&logo=1password&logoColor=white" alt="Enter PIN" /></a>
       </p>
       <p>
         Enterprise Restaurant Point-of-Sale (POS) and Kitchen Display System (KDS) engineered for ultra-fast order processing, synchronized inventory management, and intelligent kitchen analytics.
@@ -85,14 +85,14 @@
         <li>🔑 <b>Have a PIN?</b> Click below to enter your secret PIN and unlock access immediately!</li>
       </ul>
       <p align="center">
-        <a href="https://itsmohamedwael.info/unlock"><b>🔑 Enter PIN to Unlock ORYVEO ➔</b></a><br/>
+        <a href="https://www.itsmohamedwael.info/unlock"><b>🔑 Enter PIN to Unlock ORYVEO ➔</b></a><br/>
         <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5"><small><i>(Get PIN on Lava.top: <b>$20 → $10</b> with promo code <b>ITSMOHAMEDWAEL2026</b>)</i></small></a>
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">🌐 <a href="https://itsmohamedwael.info">Interactive Portfolio &amp; Aurora Engine</a></h3>
+      <h3 align="center">🌐 <a href="https://www.itsmohamedwael.info">Interactive Portfolio &amp; Aurora Engine</a></h3>
       <p align="center">
         <img src="https://img.shields.io/badge/Tailwind-CSS%203-38B2AC?style=flat-square&logo=tailwind-css" />
         <img src="https://img.shields.io/badge/Motion-React-FF4154?style=flat-square&logo=framer" />
@@ -101,7 +101,7 @@
         Award-worthy personal portfolio featuring a <b>6-layer Aurora Borealis gradient drift</b>, physics-based character tracking, dynamic video showcase engine, and strict 60fps interaction rendering.
       </p>
       <p align="center">
-        <a href="https://itsmohamedwael.info"><b>Visit itsmohamedwael.info ➔</b></a>
+        <a href="https://www.itsmohamedwael.info"><b>Visit www.itsmohamedwael.info ➔</b></a>
       </p>
     </td>
     <td width="50%" valign="top">
@@ -166,8 +166,8 @@
 
   <p>Whether you're looking to build cutting-edge AI agents, high-performance web platforms, or explore collaborations, feel free to reach out:</p>
 
-  <a href="https://itsmohamedwael.info" target="_blank">
-    <img src="https://img.shields.io/badge/Website-itsmohamedwael.info-00D4FF?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Website" />
+  <a href="https://www.itsmohamedwael.info" target="_blank">
+    <img src="https://img.shields.io/badge/Website-www.itsmohamedwael.info-00D4FF?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Website" />
   </a>
   <a href="mailto:mohamed261207@bue.edu.eg">
     <img src="https://img.shields.io/badge/Email-mohamed261207@bue.edu.eg-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
@@ -175,7 +175,7 @@
   <a href="https://github.com/itsmohamedwael">
     <img src="https://img.shields.io/badge/GitHub-Follow%20@itsmohamedwael-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
-  <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info" target="_blank">
+  <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5" target="_blank">
     <img src="https://img.shields.io/badge/Lava.top-Leave%20a%20Tip%20%E2%98%95-FF416C?style=for-the-badge&logo=kofi&logoColor=white" alt="Tip on Lava" />
   </a>
 
