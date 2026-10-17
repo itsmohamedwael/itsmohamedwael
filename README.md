@@ -68,11 +68,10 @@
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">💼 <a href="https://www.itsmohamedwael.info/unlock">ORYVEO — POS &amp; Growth Suite</a></h3>
+      <h3 align="center">💼 <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5">ORYVEO — POS &amp; Growth Suite</a></h3>
       <p align="center">
-        <img src="https://img.shields.io/badge/Status-🔒%20Locked-FF416C?style=flat-square" />
         <img src="https://img.shields.io/badge/Price-%2420%20(%2410%20with%20code)-00FF88?style=flat-square" />
-        <a href="https://www.itsmohamedwael.info/unlock"><img src="https://img.shields.io/badge/Unlock-Enter%20PIN-00D4FF?style=flat-square&logo=1password&logoColor=white" alt="Enter PIN" /></a>
+        <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5"><img src="https://img.shields.io/badge/Delivery-Instant%20GitHub%20Access-00D4FF?style=flat-square&logo=github&logoColor=white" alt="Instant GitHub Access" /></a>
       </p>
       <p>
         Enterprise Restaurant Point-of-Sale (POS) and Kitchen Display System (KDS) engineered for ultra-fast order processing, synchronized inventory management, and intelligent kitchen analytics.
@@ -80,13 +79,11 @@
       <ul>
         <li>⚡ <b>Real-Time Sync:</b> Zero-latency order routing via WebSockets.</li>
         <li>📊 <b>Operations:</b> Real-time kitchen load balancing and revenue analytics.</li>
-        <li>🏷️ <b>Price &amp; Promo:</b> <b>$20.00</b> — use coupon code <code>ITSMOHAMEDWAEL2026</code> for <b>50% OFF ($10.00)</b>!</li>
-        <li>🔒 <b>Access Control:</b> Proprietary code &amp; live demo sandbox are locked. <b>Requires a secret PIN to unlock.</b></li>
-        <li>🔑 <b>Have a PIN?</b> Click below to enter your secret PIN and unlock access immediately!</li>
+        <li>🏷️ <b>Price &amp; Promo:</b> <b>$20.00</b> — use promo code <code>ITSMOHAMEDWAEL2026</code> for <b>50% OFF ($10.00)</b>!</li>
+        <li>🚀 <b>Instant Automated Access:</b> Pay securely on Lava.top to immediately unlock direct access to the GitHub repository and source code package — delivered automatically upon payment. No waiting, no emails, no PINs needed.</li>
       </ul>
       <p align="center">
-        <a href="https://www.itsmohamedwael.info/unlock"><b>🔑 Enter PIN to Unlock ORYVEO ➔</b></a><br/>
-        <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5"><small><i>(Get PIN on Lava.top: <b>$20 → $10</b> with promo code <b>ITSMOHAMEDWAEL2026</b>)</i></small></a>
+        <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5"><b>⚡ Pay on Lava.top &amp; Unlock on GitHub ($20 → $10) ➔</b></a>
       </p>
     </td>
   </tr>
