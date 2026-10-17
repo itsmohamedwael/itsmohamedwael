@@ -3,9 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import { MagneticButton } from "@/components/motion/MagneticButton";
 
 interface HeaderProps {
   activeSection?: string;
@@ -14,144 +12,135 @@ interface HeaderProps {
 export function Header({ activeSection = "hero" }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { scrollY } = useScroll();
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setIsScrolled(latest > 50);
-  });
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 30);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
-    { label: "About", href: "/#about", id: "about" },
-    { label: "Skills", href: "/#skills", id: "skills" },
-    { label: "Works", href: "/#work", id: "work" },
-    { label: "Experience", href: "/#experience", id: "experience" },
-    { label: "Contact", href: "/#contact", id: "contact" },
+    { label: "Works", href: "#work" },
+    { label: "Services", href: "#services" },
+    { label: "Process", href: "#process" },
+    { label: "Stack", href: "#stack" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#100e0b]/80 backdrop-blur-xl border-b border-white/10 py-3.5 shadow-2xl"
-            : "bg-transparent py-6"
+            ? "bg-[#0c0b0a]/90 border-b border-[#242220] py-3.5"
+            : "bg-transparent py-5"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
-          {/* Logo Brand Anchor */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+          {/* Logo & Name */}
           <Link
-            href="/#hero"
-            className="group flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:outline-none rounded-lg p-1"
-            aria-label="MWAEL — Return to top"
+            href="#hero"
+            className="group flex items-center gap-3 focus:outline-none"
+            aria-label="Mohamed Wael — Top"
           >
-            <div className="relative h-10 w-10 overflow-hidden rounded-lg border border-white/10 bg-[#161310] p-1.5 transition-transform duration-300 group-hover:scale-105 group-hover:border-emerald-400/40">
+            <div className="relative h-8 w-8 overflow-hidden rounded border border-[#242220] bg-[#141312] p-1 transition-colors group-hover:border-[#3a3836]">
               <Image
                 src="/logo/mw-logo-white.png"
-                alt="MWAEL Official Logo"
+                alt="MW Logo"
                 fill
-                sizes="40px"
-                className="object-contain p-1"
+                sizes="32px"
+                className="object-contain p-0.5"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-lg tracking-wider text-[#fbfaf8] group-hover:text-emerald-300 transition-colors">
-                MWAEL
+              <span className="font-sans text-sm font-medium tracking-tight text-[#dedad5] group-hover:text-white transition-colors">
+                Mohamed Wael
               </span>
-              <span className="font-mono text-[9px] uppercase tracking-widest text-stone-400">
-                Studio Portfolio
+              <span className="font-mono text-[10px] uppercase tracking-wider text-[#736f69]">
+                AI & Systems Engineer
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav Links */}
           <nav
-            className="hidden md:flex items-center gap-1 rounded-full border border-white/10 bg-[#14110e]/70 px-4 py-1.5 backdrop-blur-md shadow-inner"
+            className="hidden md:flex items-center gap-1 rounded-full border border-[#242220] bg-[#141312]/90 px-4 py-1.5 shadow-sm"
             aria-label="Main Navigation"
           >
             {navLinks.map((link) => {
-              const isActive = activeSection === link.id;
+              const isActive = activeSection === link.href.replace("#", "");
               return (
                 <Link
-                  key={link.id}
+                  key={link.label}
                   href={link.href}
-                  className={`relative px-4 py-1.5 font-mono text-xs tracking-wider transition-colors focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:outline-none rounded-full ${
-                    isActive ? "text-emerald-300" : "text-stone-400 hover:text-[#fbfaf8]"
+                  className={`px-3 py-1 font-mono text-xs tracking-wider transition-colors rounded-full ${
+                    isActive
+                      ? "text-white bg-[#242220]"
+                      : "text-[#b8b4ae] hover:text-[#dedad5]"
                   }`}
                 >
-                  {isActive && (
-                    <motion.span
-                      layoutId="navIndicator"
-                      className="absolute inset-0 rounded-full bg-white/10 border border-emerald-400/30"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                  <span className="relative z-10">{link.label}</span>
+                  {link.label}
                 </Link>
               );
             })}
           </nav>
 
-          {/* Right Action / CTA Button */}
-          <div className="hidden md:flex items-center gap-3">
-            <MagneticButton
-              asLink
-              href="/#contact"
-              className="rounded-full border border-emerald-400/40 bg-emerald-400/10 px-5 py-2 font-mono text-xs tracking-widest uppercase text-emerald-300 transition-all hover:bg-emerald-400 hover:text-black hover:shadow-[0_0_20px_rgba(78,242,187,0.4)]"
+          {/* Right Action / Availability Pill */}
+          <div className="hidden lg:flex items-center gap-3">
+            <div className="flex items-center gap-2 rounded-full border border-[#242220] bg-[#141312] px-3 py-1 text-[11px] font-mono text-[#b8b4ae]">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Available</span>
+            </div>
+            <Link
+              href="#contact"
+              className="inline-flex items-center gap-1.5 rounded-full bg-[#dedad5] px-4 py-1.5 font-sans text-xs font-medium text-[#0c0b0a] hover:bg-white transition-all shadow-sm"
             >
               <span>Get in Touch</span>
-              <ArrowUpRight className="ml-1.5 h-3.5 w-3.5" />
-            </MagneticButton>
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
 
-          {/* Mobile Hamburger Toggle */}
+          {/* Mobile Menu Trigger */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-[#161310] text-stone-300 focus-visible:ring-2 focus-visible:ring-emerald-400"
+            className="flex md:hidden items-center justify-center h-9 w-9 rounded-md border border-[#242220] bg-[#141312] text-[#dedad5] hover:text-white"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </header>
 
-      {/* Mobile Drawer Navigation Overlay */}
+      {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="fixed inset-x-0 top-[65px] z-30 border-b border-white/10 bg-[#100e0b]/95 px-6 py-8 backdrop-blur-2xl md:hidden shadow-2xl"
-        >
-          <nav className="flex flex-col gap-4" aria-label="Mobile Navigation">
+        <div className="fixed inset-0 z-30 bg-[#0c0b0a]/95 pt-24 px-6 md:hidden flex flex-col justify-between pb-8">
+          <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
-                key={link.id}
+                key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between border-b border-white/5 py-3 font-serif text-2xl text-stone-200 hover:text-emerald-300 transition-colors"
+                className="font-sans text-2xl font-light text-[#dedad5] hover:text-white transition-colors"
               >
-                <span>{link.label}</span>
-                <span className="font-mono text-xs text-stone-500">
-                  {link.id.toUpperCase()}
-                </span>
+                {link.label}
               </Link>
             ))}
-
-            <div className="pt-4">
-              <Link
-                href="/#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-400/10 py-3 font-mono text-xs uppercase tracking-widest text-emerald-300"
-              >
-                <span>Initiate Contact</span>
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </div>
           </nav>
-        </motion.div>
+          <div className="pt-6 border-t border-[#242220]">
+            <Link
+              href="#contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-center gap-2 w-full rounded-full bg-[#dedad5] py-3 text-sm font-medium text-[#0c0b0a]"
+            >
+              <span>Get in Touch</span>
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
       )}
     </>
   );

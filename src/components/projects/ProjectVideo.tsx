@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 import { Volume2, VolumeX, Play, Pause } from "lucide-react";
 
 interface ProjectVideoProps {
@@ -18,51 +19,37 @@ export function ProjectVideo({
   title,
   aspectRatio = "video",
   className = "",
-  autoPlayInView = true,
+  autoPlayInView = false, // default to hover/click play to prevent decode lag!
 }: ProjectVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
-  // Viewport IntersectionObserver: autonomous play/pause management
-  useEffect(() => {
-    if (!autoPlayInView || !containerRef.current) return;
+  // Smooth hover-to-play with instant cleanup
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    const video = videoRef.current;
+    if (video) {
+      video
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch(() => {});
+    }
+  };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const video = videoRef.current;
-          if (!video) return;
-
-          if (entry.isIntersecting) {
-            video
-              .play()
-              .then(() => setIsPlaying(true))
-              .catch(() => {
-                // Browsers block unmuted autoplay; ensure muted
-                video.muted = true;
-                setIsMuted(true);
-                video.play().then(() => setIsPlaying(true)).catch(() => {});
-              });
-          } else {
-            video.pause();
-            setIsPlaying(false);
-          }
-        });
-      },
-      { threshold: 0.35 }
-    );
-
-    observer.observe(containerRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [autoPlayInView]);
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    const video = videoRef.current;
+    if (video) {
+      video.pause();
+      setIsPlaying(false);
+    }
+  };
 
   const togglePlay = (e: React.MouseEvent) => {
+    e.preventDefault();
     e.stopPropagation();
     const video = videoRef.current;
     if (!video) return;
@@ -76,6 +63,7 @@ export function ProjectVideo({
   };
 
   const toggleMute = (e: React.MouseEvent) => {
+    e.preventDefault();
     e.stopPropagation();
     const video = videoRef.current;
     if (!video) return;
@@ -84,10 +72,9 @@ export function ProjectVideo({
     setIsMuted(video.muted);
   };
 
-  // Aspect ratio classes
   const aspectClass =
     aspectRatio === "portrait"
-      ? "aspect-[9/16] max-h-[580px]"
+      ? "aspect-[9/14] max-h-[480px]"
       : aspectRatio === "square"
       ? "aspect-square"
       : "aspect-video";
@@ -95,7 +82,9 @@ export function ProjectVideo({
   return (
     <div
       ref={containerRef}
-      className={`group relative w-full overflow-hidden rounded-xl border border-white/10 bg-[#14110e] shadow-2xl transition-all duration-500 hover:border-emerald-400/30 ${aspectClass} ${className}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={`group relative w-full overflow-hidden rounded-xl border border-[#242220] bg-[#141312] transition-colors duration-300 hover:border-[#3a3836] ${aspectClass} ${className}`}
     >
       {/* Video Element */}
       <video
@@ -103,48 +92,44 @@ export function ProjectVideo({
         src={src}
         poster={poster}
         playsInline
-        loop
         muted={isMuted}
+        loop
         preload="metadata"
-        onLoadedData={() => setIsLoaded(true)}
-        className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-        aria-label={`Showcase video for ${title}`}
+        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+        aria-label={`${title} showcase video`}
       />
 
-      {/* Subtle vignette gradient */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 transition-opacity group-hover:opacity-40" />
+      {/* Play/Pause overlay indicator when not playing */}
+      {!isPlaying && (
+        <div
+          onClick={togglePlay}
+          className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-[2px] transition-opacity cursor-pointer"
+        >
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#dedad5] text-[#0c0b0a] shadow-lg transition-transform hover:scale-110">
+            <Play className="h-5 w-5 fill-current ml-0.5" />
+          </div>
+        </div>
+      )}
 
-      {/* Media Controls Bar (bottom right) */}
-      <div className="absolute bottom-3 right-3 z-20 flex items-center gap-1.5 opacity-90 transition-opacity duration-300 group-hover:opacity-100">
+      {/* Floating Controls Bar */}
+      <div className="absolute bottom-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
         <button
           type="button"
           onClick={togglePlay}
+          className="flex h-7 w-7 items-center justify-center rounded-full bg-[#141312]/90 border border-[#242220] text-[#dedad5] hover:text-white"
           aria-label={isPlaying ? "Pause video" : "Play video"}
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/70 text-white backdrop-blur-md transition-all hover:bg-emerald-500/20 hover:border-emerald-400 hover:text-emerald-300 focus-visible:ring-2 focus-visible:ring-emerald-400"
         >
-          {isPlaying ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5 ml-0.5" />}
+          {isPlaying ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3 fill-current ml-0.5" />}
         </button>
 
         <button
           type="button"
           onClick={toggleMute}
-          aria-label={isMuted ? "Unmute audio" : "Mute audio"}
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/70 text-white backdrop-blur-md transition-all hover:bg-emerald-500/20 hover:border-emerald-400 hover:text-emerald-300 focus-visible:ring-2 focus-visible:ring-emerald-400"
+          className="flex h-7 w-7 items-center justify-center rounded-full bg-[#141312]/90 border border-[#242220] text-[#dedad5] hover:text-white"
+          aria-label={isMuted ? "Unmute video" : "Mute video"}
         >
-          {isMuted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5" />}
+          {isMuted ? <VolumeX className="h-3 w-3" /> : <Volume2 className="h-3 w-3" />}
         </button>
-      </div>
-
-      {/* Video Live Status Indicator */}
-      <div className="absolute top-3 left-3 z-20 flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-2.5 py-1 backdrop-blur-md">
-        <span
-          className={`h-1.5 w-1.5 rounded-full ${
-            isPlaying ? "bg-emerald-400 animate-pulse" : "bg-stone-500"
-          }`}
-        />
-        <span className="font-mono text-[9px] uppercase tracking-widest text-stone-300">
-          {isPlaying ? "Live Reel" : "Paused"}
-        </span>
       </div>
     </div>
   );

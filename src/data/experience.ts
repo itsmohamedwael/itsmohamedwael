@@ -35,22 +35,6 @@ export const experienceTimeline: ExperienceItem[] = [
     technologies: ["C++", "Circuit Theory", "Digital Logic", "Data Structures", "Engineering Mathematics", "Physics"],
   },
   {
-    id: "house-burger",
-    role: "Digital Art & UI/UX Designer",
-    organization: "House Burger",
-    location: "Ismailia, Egypt",
-    period: "Jan 2025 — Aug 2025",
-    type: "Design",
-    summary:
-      "Led digital visual identity transformation, customer-facing touchpoint design, and commercial promotional assets across retail and digital channels.",
-    achievements: [
-      "Engineered cohesive visual art design language that fueled a documented 25% surge in retail sales.",
-      "Designed frictionless digital ordering interfaces and interactive displays, significantly elevating consumer engagement.",
-      "Standardized multi-channel brand assets across outdoor billboards, social campaigns, and on-premise collateral.",
-    ],
-    technologies: ["Digital Art Design", "UI/UX Prototyping", "Visual Identity", "Typography", "Commercial Advertising"],
-  },
-  {
     id: "zen-local",
     role: "Creative Director & Apparel Designer",
     organization: "Zen Local Brand",

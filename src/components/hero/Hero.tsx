@@ -1,161 +1,133 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
-import { ArrowDown, Sparkles, FileText, ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Download } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { InteractiveCharacter } from "@/components/character/InteractiveCharacter";
-import { MagneticButton } from "@/components/motion/MagneticButton";
 
 export function Hero() {
-  const prefersReduced = useReducedMotion();
+  const [cairoTime, setCairoTime] = useState<string>("");
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone: "Africa/Cairo",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      };
+      setCairoTime(new Intl.DateTimeFormat("en-US", options).format(now));
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between pt-32 pb-16 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto"
+      className="relative min-h-[90vh] flex flex-col justify-between pt-28 pb-16 px-4 sm:px-6 max-w-6xl mx-auto"
     >
-      {/* Top Meta Tagline */}
-      <motion.div
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.1 }}
-        className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-6 mb-8"
-      >
-        <div className="flex items-center gap-3">
-          <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em] text-emerald-400 flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Computer Engineering & AI Systems
-          </span>
-          <span className="text-white/20 hidden sm:inline">/</span>
-          <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] text-stone-400 hidden sm:inline">
-            The British University in Egypt
+      {/* Top Status & Time Bar */}
+      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#242220] pb-5 mb-12">
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#242220] bg-[#141312] px-3 py-1">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="font-mono text-xs uppercase tracking-wider text-[#dedad5]">
+            Available for Q4 2026 / 2027 projects
           </span>
         </div>
 
-        <div className="font-mono text-[11px] text-stone-500">
-          Cairo, EG · 2026
+        <div className="flex items-center gap-4 font-mono text-xs text-[#736f69]">
+          <span>{cairoTime || "CAIRO TIME"}</span>
+          <span className="text-[#33302c]">•</span>
+          <span>CAIRO, EGYPT (GMT+3)</span>
         </div>
-      </motion.div>
+      </div>
 
-      {/* Main Composition: Editorial Typography + Interactive Character */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center my-auto">
-        {/* Left: Signature Display Typography */}
+      {/* Main Hero Split */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center my-auto">
+        {/* Left: Editorial Typography */}
         <div className="lg:col-span-7 flex flex-col space-y-6">
-          <div className="space-y-1">
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="font-mono text-xs uppercase tracking-[0.3em] text-stone-400 block"
-            >
-              Independent Technologist & Designer
-            </motion.span>
+          <div className="space-y-3">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#736f69] block">
+              Computer Engineering & AI Software Engineer
+            </span>
 
-            {/* Display Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="text-4xl sm:text-6xl xl:text-7xl font-serif tracking-tight text-[#fbfaf8] leading-[1.05]"
-            >
-              Designing ideas. <br />
-              <span className="text-gradient-aurora italic font-light">
-                Engineering experiences.
-              </span>
-            </motion.h1>
+            <h1 className="text-4xl sm:text-6xl font-sans font-light tracking-tight text-[#dedad5] leading-[1.1]">
+              Autonomous AI systems & web platforms for founders.
+            </h1>
           </div>
 
-          {/* Subtitle / Bio extract */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.45 }}
-            className="text-base sm:text-lg text-stone-300 font-sans max-w-xl leading-relaxed"
-          >
-            I am <strong className="text-white font-medium">{profileData.name}</strong>, a computer engineering student combining low-level systems programming and autonomous desktop AI with award-winning visual craftsmanship.
-          </motion.p>
+          <p className="text-base sm:text-lg text-[#b8b4ae] font-sans leading-relaxed max-w-xl">
+            Computer Engineering scholar at <span className="text-[#dedad5]">Helwan University</span>.
+            I design and build autonomous agent workflows, offline-first enterprise systems, and hyper-refined web experiences — combining low-level systems logic with editorial design.
+          </p>
 
           {/* Action Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap items-center gap-4 pt-4"
-          >
-            <MagneticButton
-              asLink
+          <div className="flex flex-wrap items-center gap-3 pt-2">
+            <Link
               href="#work"
-              className="rounded-full border border-emerald-400 bg-emerald-400 px-6 py-3 font-mono text-xs uppercase tracking-widest text-[#100e0b] font-semibold transition-all hover:bg-emerald-300 hover:shadow-[0_0_25px_rgba(78,242,187,0.5)]"
+              className="inline-flex items-center gap-2 rounded-full bg-[#dedad5] px-5 py-2.5 font-sans text-xs font-medium text-[#0c0b0a] hover:bg-white transition-all shadow-sm"
             >
-              <span>Explore Works</span>
-              <ArrowDown className="ml-2 h-3.5 w-3.5" />
-            </MagneticButton>
+              <span>Selected Works</span>
+              <ArrowDown className="h-3.5 w-3.5" />
+            </Link>
 
-            <MagneticButton
-              asLink
+            <Link
               href="/Mohamed_Wael_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-white/20 bg-white/5 px-6 py-3 font-mono text-xs uppercase tracking-widest text-stone-200 transition-all hover:bg-white/10 hover:border-white/40"
+              className="inline-flex items-center gap-2 rounded-full border border-[#242220] bg-[#141312] px-5 py-2.5 font-sans text-xs text-[#dedad5] hover:border-[#3a3836] hover:text-white transition-colors"
             >
-              <FileText className="mr-2 h-3.5 w-3.5 text-emerald-400" />
+              <Download className="h-3.5 w-3.5" />
               <span>Download CV</span>
-              <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 opacity-60" />
-            </MagneticButton>
-          </motion.div>
+            </Link>
+
+            <Link
+              href="#contact"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 font-mono text-xs text-[#736f69] hover:text-[#dedad5] transition-colors"
+            >
+              <span>Contact Directly</span>
+              <ArrowUpRight className="h-3 w-3" />
+            </Link>
+          </div>
         </div>
 
-        {/* Right: Interactive Character Canvas */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 30 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 180,
-            damping: 22,
-            delay: 0.35,
-          }}
-          className="lg:col-span-5 flex justify-center lg:justify-end"
-        >
-          <InteractiveCharacter activeSection="hero" />
-        </motion.div>
+        {/* Right: Interactive Character Stage */}
+        <div className="lg:col-span-5 flex justify-center lg:justify-end">
+          <div className="w-full max-w-sm rounded-2xl border border-[#242220] bg-[#141312]/70 p-6 flex flex-col items-center shadow-lg">
+            <InteractiveCharacter compact={false} />
+            <div className="mt-4 pt-4 border-t border-[#242220] w-full flex items-center justify-between text-[11px] font-mono text-[#736f69]">
+              <span>MWAEL AVATAR</span>
+              <span>VERIFIED TALENT</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Bottom Bar: Key Metrics & Scroll Cue */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.8 }}
-        className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6"
-      >
-        {/* Quick Stats Strip */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full md:w-auto">
-          {profileData.metrics.map((metric, i) => (
-            <div key={i} className="flex flex-col">
-              <span className="font-serif text-2xl text-[#fbfaf8]">
-                {metric.value}
-              </span>
-              <span className="font-mono text-[10px] uppercase tracking-wider text-stone-400">
-                {metric.label}
-              </span>
-            </div>
-          ))}
+      {/* Bottom KPI Bar */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-[#242220] pt-6 mt-12 font-mono text-xs">
+        <div>
+          <span className="text-[#736f69] block text-[10px] uppercase">Education</span>
+          <span className="text-[#dedad5] font-medium">Helwan University</span>
         </div>
-
-        {/* Scroll down indicator */}
-        <Link
-          href="#about"
-          className="group flex items-center gap-3 font-mono text-[11px] uppercase tracking-widest text-stone-400 hover:text-emerald-300 transition-colors"
-          aria-label="Scroll to About section"
-        >
-          <span>Scroll to explore</span>
-          <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-[#161310] transition-transform group-hover:translate-y-1">
-            <ArrowDown className="h-3.5 w-3.5 text-emerald-400" />
-          </span>
-        </Link>
-      </motion.div>
+        <div>
+          <span className="text-[#736f69] block text-[10px] uppercase">Degree / GPA</span>
+          <span className="text-[#dedad5] font-medium">Computer Eng. (3.4 / 4.0)</span>
+        </div>
+        <div>
+          <span className="text-[#736f69] block text-[10px] uppercase">Core Focus</span>
+          <span className="text-[#dedad5] font-medium">AI & Full-Stack</span>
+        </div>
+        <div>
+          <span className="text-[#736f69] block text-[10px] uppercase">Status</span>
+          <span className="text-emerald-400 font-medium">Available</span>
+        </div>
+      </div>
     </section>
   );
 }

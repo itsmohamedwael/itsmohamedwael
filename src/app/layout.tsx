@@ -25,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#100e0b",
+  themeColor: "#0c0b0a",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -145,7 +145,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#100e0b] text-[#fbfaf8] font-sans selection:bg-emerald-400/20 selection:text-emerald-300">
+      <body className="bg-[#0c0b0a] text-[#dedad5] font-sans selection:bg-white/10 selection:text-white">
         {/* Skip to Content Link (Accessibility) */}
         <a
           href="#main-content"

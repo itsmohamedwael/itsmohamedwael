@@ -131,37 +131,6 @@ export const projectsData: Project[] = [
     liveUrl: "https://instagram.com/zen.local.brand",
   },
   {
-    slug: "house-burger-brand-system",
-    title: "House Burger — Visual Identity & Digital UI",
-    tagline: "Complete visual reinvention and digital customer touchpoints driving a verified 25% revenue surge.",
-    category: "Brand Systems & UI Design",
-    year: "2025",
-    role: "Lead Digital Art Designer",
-    summary:
-      "Engineered an impactful visual art design language, customer ordering touchpoints, and commercial promotional collateral for House Burger, directly elevating brand equity and driving measurable financial returns.",
-    videoSrc: "/videos/visual-campaign.mp4",
-    posterSrc: "/videos/posters/poster-visual-campaign.jpg",
-    aspectRatio: "portrait",
-    featured: true,
-    technologies: [
-      "Digital Art Direction",
-      "UI/UX Interface Prototyping",
-      "Menu Architecture",
-      "Commercial Advertising Systems",
-      "Typography & Color Theory",
-    ],
-    challenge:
-      "Legacy food-and-beverage visuals lacked appetite appeal and digital cohesion, resulting in slow ordering throughput and stagnant sales numbers.",
-    solution:
-      "Crafted vibrant, high-contrast digital art layouts, streamlined interactive digital menus for fast decision-making, and harmonized the visual presence across print and digital media.",
-    impact: [
-      "Documented 25% sales increase within the first two quarters of deployment.",
-      "Customer checkout time reduced thanks to clean visual hierarchies.",
-      "Consistent, recognizable brand language across the regional market.",
-    ],
-    liveUrl: "https://itsmohamedwael.info/",
-  },
-  {
     slug: "arduino-obstacle-navigation",
     title: "Assistive Haptic & Acoustic Obstacle Navigator",
     tagline: "Microcontroller-driven spatial awareness device engineered for visually impaired navigation.",

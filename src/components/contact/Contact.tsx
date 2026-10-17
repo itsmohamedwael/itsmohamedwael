@@ -1,219 +1,162 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Phone, Copy, Check, ArrowUpRight, Sparkles, MapPin, Globe } from "lucide-react";
-import confetti from "canvas-confetti";
+import { Mail, Phone, ArrowUpRight, Check, Send } from "lucide-react";
 import { profileData } from "@/data/profile";
-import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import { AnimatedText } from "@/components/motion/AnimatedText";
-import { MagneticButton } from "@/components/motion/MagneticButton";
 
 export function Contact() {
-  const [copied, setCopied] = useState(false);
-  const [selectedTopic, setSelectedTopic] = useState<string>("AI Systems Engineering");
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    scope: "AI Systems Architecture",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
 
-  const topics = [
-    "AI Systems Engineering",
-    "Brand & Visual Art Direction",
-    "Full-Stack Web Architecture",
-    "Hardware & IoT Prototyping",
-    "General Inquiry",
-  ];
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(profileData.email);
-    setCopied(true);
-    confetti({
-      particleCount: 20,
-      spread: 45,
-      origin: { y: 0.8 },
-      colors: ["#4ef2bb", "#3b82f6", "#ffffff"],
-    });
-    setTimeout(() => setCopied(false), 2500);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const mailto = `mailto:${profileData.email}?subject=${encodeURIComponent(
+      `Project Inquiry: ${formState.scope} — ${formState.name}`
+    )}&body=${encodeURIComponent(
+      `Name: ${formState.name}\nEmail: ${formState.email}\nScope: ${formState.scope}\n\nMessage:\n${formState.message}`
+    )}`;
+    window.location.href = mailto;
+    setSubmitted(true);
   };
 
-  const mailtoHref = `mailto:${profileData.email}?subject=${encodeURIComponent(
-    `Project Inquiry: ${selectedTopic} — MWAEL`
-  )}&body=${encodeURIComponent(
-    `Hello Mohamed,\n\nI reviewed your portfolio and would like to discuss a project regarding ${selectedTopic}.\n\nBest regards,\n`
-  )}`;
-
   return (
-    <section id="contact" className="relative py-28 sm:py-36 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
-      {/* Subtle Aurora Ambient Reappearance */}
-      <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
-        <div className="h-96 w-96 rounded-full bg-gradient-to-tr from-emerald-500/10 via-blue-500/10 to-purple-500/10 blur-[130px]" />
-      </div>
-
-      {/* Meta Tag */}
-      <div className="flex items-center gap-3 mb-6">
-        <span className="font-mono text-xs tracking-widest text-emerald-400">04 //</span>
-        <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone-400">
-          Direct Channels & Inquiries
-        </span>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-        {/* Left Column: Heading & Topic Selector */}
-        <div className="lg:col-span-7 space-y-8">
+    <section id="contact" className="py-24 px-4 sm:px-6 max-w-6xl mx-auto border-t border-[#242220]">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        {/* Left Column */}
+        <div className="lg:col-span-5 space-y-6">
           <div>
-            <AnimatedText
-              text="Let's build something remarkable together."
-              className="text-4xl sm:text-6xl font-serif text-[#fbfaf8] leading-[1.08] mb-6"
-            />
-            <p className="text-stone-300 text-base sm:text-lg font-sans max-w-xl leading-relaxed">
-              Whether you need to architect an autonomous AI agent, develop high-performance software, or elevate your brand with distinctive visual direction, my channels are always open.
+            <span className="font-mono text-xs uppercase tracking-widest text-[#736f69] block mb-2">
+              Start a Conversation
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-sans font-light tracking-tight text-[#dedad5] mb-4">
+              Got something to build?
+            </h2>
+            <p className="text-base text-[#b8b4ae] font-sans leading-relaxed">
+              Tell me about your product, roadmap, or engineering challenge. I reply to all inquiries within 24 hours.
             </p>
           </div>
 
-          {/* Topic Selector */}
-          <div>
-            <label className="font-mono text-xs uppercase tracking-widest text-stone-400 block mb-3">
-              Select inquiry topic (pre-fills your message):
-            </label>
-            <div className="flex flex-wrap gap-2">
-              {topics.map((topic) => (
-                <button
-                  key={topic}
-                  type="button"
-                  onClick={() => setSelectedTopic(topic)}
-                  className={`rounded-full px-4 py-1.5 font-mono text-xs transition-all duration-300 focus-visible:ring-2 focus-visible:ring-emerald-400 ${
-                    selectedTopic === topic
-                      ? "border border-emerald-400 bg-emerald-400/15 text-emerald-300"
-                      : "border border-white/10 bg-[#14110e] text-stone-400 hover:border-white/25 hover:text-white"
-                  }`}
-                >
-                  {topic}
-                </button>
-              ))}
+          <div className="space-y-3 pt-4 border-t border-[#242220]">
+            <div>
+              <span className="font-mono text-[10px] uppercase text-[#736f69] block mb-1">
+                Direct Email
+              </span>
+              <a
+                href={`mailto:${profileData.email}`}
+                className="font-mono text-sm text-[#dedad5] hover:text-white transition-colors"
+              >
+                {profileData.email}
+              </a>
+            </div>
+
+            <div>
+              <span className="font-mono text-[10px] uppercase text-[#736f69] block mb-1">
+                Location & Timezone
+              </span>
+              <span className="font-mono text-xs text-[#b8b4ae]">
+                Cairo, Egypt · GMT+3 (Async-first)
+              </span>
             </div>
           </div>
 
-          {/* Direct CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-4">
-            <MagneticButton
-              asLink
-              href={mailtoHref}
-              className="gap-2 rounded-full border border-emerald-400 bg-emerald-400 px-7 py-3.5 font-mono text-xs uppercase tracking-widest text-[#100e0b] font-semibold hover:bg-emerald-300 hover:shadow-[0_0_25px_rgba(78,242,187,0.4)] transition-all"
-            >
-              <Mail className="h-4 w-4" />
-              <span>Send Message</span>
-              <ArrowUpRight className="h-4 w-4" />
-            </MagneticButton>
-
-            <button
-              type="button"
-              onClick={handleCopyEmail}
-              className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 font-mono text-xs uppercase tracking-widest text-stone-300 hover:border-white/35 hover:text-white transition-all focus-visible:ring-2 focus-visible:ring-emerald-400"
-            >
-              {copied ? (
-                <>
-                  <Check className="h-4 w-4 text-emerald-400" />
-                  <span className="text-emerald-300">Email Copied to Clipboard!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="h-4 w-4 text-stone-400 group-hover:text-emerald-400 transition-colors" />
-                  <span>Copy Email Address</span>
-                </>
-              )}
-            </button>
+          <div className="pt-2 flex flex-wrap gap-2 font-mono text-xs text-[#736f69]">
+            {[
+              { platform: "GitHub", url: profileData.socials.github },
+              { platform: "LinkedIn", url: profileData.socials.linkedin },
+              { platform: "Instagram", url: profileData.socials.instagram },
+            ].map((s) => (
+              <a
+                key={s.platform}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full border border-[#242220] bg-[#141312] px-3 py-1 text-[#b8b4ae] hover:border-[#3a3836] hover:text-white transition-colors"
+              >
+                <span>{s.platform}</span>
+                <ArrowUpRight className="h-3 w-3" />
+              </a>
+            ))}
           </div>
         </div>
 
-        {/* Right Column: Contact Dossier Card */}
-        <div className="lg:col-span-5">
-          <ScrollReveal delay={0.2}>
-            <div className="rounded-2xl border border-white/10 bg-[#14110e]/95 p-6 sm:p-8 space-y-6 shadow-2xl backdrop-blur-md">
-              <h3 className="font-mono text-xs uppercase tracking-widest text-emerald-400 flex items-center gap-2">
-                <Sparkles className="h-4 w-4" />
-                <span>Verified Contact Dossier</span>
-              </h3>
-
-              <div className="space-y-4 font-mono text-xs">
-                {/* Email item */}
-                <div className="rounded-xl border border-white/5 bg-[#181512] p-4 flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-3 overflow-hidden">
-                    <Mail className="h-4 w-4 text-emerald-400 shrink-0" />
-                    <div className="flex flex-col overflow-hidden">
-                      <span className="text-[10px] uppercase text-stone-500">Email</span>
-                      <a
-                        href={`mailto:${profileData.email}`}
-                        className="text-stone-200 hover:text-emerald-300 transition-colors truncate"
-                      >
-                        {profileData.email}
-                      </a>
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={handleCopyEmail}
-                    className="p-1.5 rounded text-stone-400 hover:text-white transition-colors"
-                    title="Copy email"
-                  >
-                    {copied ? <Check className="h-4 w-4 text-emerald-400" /> : <Copy className="h-4 w-4" />}
-                  </button>
-                </div>
-
-                {/* Phone item */}
-                <div className="rounded-xl border border-white/5 bg-[#181512] p-4 flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-3">
-                    <Phone className="h-4 w-4 text-blue-400 shrink-0" />
-                    <div className="flex flex-col">
-                      <span className="text-[10px] uppercase text-stone-500">Direct Phone</span>
-                      <a
-                        href={`tel:${profileData.phone}`}
-                        className="text-stone-200 hover:text-blue-300 transition-colors"
-                      >
-                        {profileData.phone}
-                      </a>
-                    </div>
-                  </div>
-                  <a
-                    href={`tel:${profileData.phone}`}
-                    className="p-1.5 text-stone-400 hover:text-white"
-                    title="Call"
-                  >
-                    <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                </div>
-
-                {/* Location */}
-                <div className="rounded-xl border border-white/5 bg-[#181512] p-4 flex items-center gap-3">
-                  <MapPin className="h-4 w-4 text-purple-400 shrink-0" />
-                  <div className="flex flex-col">
-                    <span className="text-[10px] uppercase text-stone-500">Base Location</span>
-                    <span className="text-stone-200">{profileData.location}</span>
-                  </div>
-                </div>
-
-                {/* Website */}
-                <div className="rounded-xl border border-white/5 bg-[#181512] p-4 flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-3">
-                    <Globe className="h-4 w-4 text-emerald-400 shrink-0" />
-                    <div className="flex flex-col">
-                      <span className="text-[10px] uppercase text-stone-500">Official Web</span>
-                      <span className="text-stone-200">itsmohamedwael.info</span>
-                    </div>
-                  </div>
-                  <a
-                    href={profileData.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-1.5 text-stone-400 hover:text-white"
-                  >
-                    <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Status Note */}
-              <div className="pt-2 border-t border-white/10 flex items-center gap-2 text-stone-400 font-mono text-[11px]">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Currently available for selected AI & Creative projects.</span>
-              </div>
+        {/* Right Column: Interactive Form */}
+        <div className="lg:col-span-7">
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-2xl border border-[#242220] bg-[#141312] p-6 sm:p-8 space-y-4"
+          >
+            <div>
+              <label className="font-mono text-xs text-[#b8b4ae] block mb-1.5">
+                Your Name
+              </label>
+              <input
+                type="text"
+                required
+                value={formState.name}
+                onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                placeholder="Jane Doe"
+                className="w-full rounded-lg border border-[#242220] bg-[#0c0b0a] px-3.5 py-2.5 text-sm text-[#dedad5] placeholder-[#736f69] focus:border-[#dedad5] focus:outline-none transition-colors"
+              />
             </div>
-          </ScrollReveal>
+
+            <div>
+              <label className="font-mono text-xs text-[#b8b4ae] block mb-1.5">
+                Your Email
+              </label>
+              <input
+                type="email"
+                required
+                value={formState.email}
+                onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                placeholder="jane@company.com"
+                className="w-full rounded-lg border border-[#242220] bg-[#0c0b0a] px-3.5 py-2.5 text-sm text-[#dedad5] placeholder-[#736f69] focus:border-[#dedad5] focus:outline-none transition-colors"
+              />
+            </div>
+
+            <div>
+              <label className="font-mono text-xs text-[#b8b4ae] block mb-1.5">
+                What do you need?
+              </label>
+              <select
+                value={formState.scope}
+                onChange={(e) => setFormState({ ...formState, scope: e.target.value })}
+                className="w-full rounded-lg border border-[#242220] bg-[#0c0b0a] px-3.5 py-2.5 text-sm text-[#dedad5] focus:border-[#dedad5] focus:outline-none transition-colors"
+              >
+                <option value="AI Systems Architecture">AI Systems & Autonomous Agents</option>
+                <option value="Full-Stack Web Development">Full-Stack Web Application (Next.js)</option>
+                <option value="Enterprise POS & Offline Systems">Enterprise POS & Offline Systems</option>
+                <option value="Hardware & Embedded IoT">Hardware & Embedded Computing</option>
+                <option value="Creative Direction & Branding">Creative Direction & UI Engineering</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="font-mono text-xs text-[#b8b4ae] block mb-1.5">
+                Project Details
+              </label>
+              <textarea
+                rows={4}
+                required
+                value={formState.message}
+                onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                placeholder="Briefly describe your objectives, timeline, or current challenge..."
+                className="w-full rounded-lg border border-[#242220] bg-[#0c0b0a] px-3.5 py-2.5 text-sm text-[#dedad5] placeholder-[#736f69] focus:border-[#dedad5] focus:outline-none transition-colors resize-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-[#dedad5] py-3 text-sm font-medium text-[#0c0b0a] hover:bg-white transition-colors"
+            >
+              <span>{submitted ? "Opening Mail Client..." : "Send Inquiry"}</span>
+              <Send className="h-4 w-4" />
+            </button>
+          </form>
         </div>
       </div>
     </section>

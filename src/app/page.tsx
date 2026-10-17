@@ -1,86 +1,51 @@
 import React from "react";
 import { AuroraBackground } from "@/components/visual/AuroraBackground";
 import { Hero } from "@/components/hero/Hero";
-import { About } from "@/components/about/About";
-import { Skills } from "@/components/skills/Skills";
-import { Experience } from "@/components/experience/Experience";
-import { Contact } from "@/components/contact/Contact";
 import { ProjectGallery } from "@/components/projects/ProjectGallery";
-import { SectionTransition } from "@/components/motion/SectionTransition";
-import { AnimatedText } from "@/components/motion/AnimatedText";
+import { Skills } from "@/components/skills/Skills";
+import { Process } from "@/components/process/Process";
+import { Experience } from "@/components/experience/Experience";
+import { FAQ } from "@/components/faq/FAQ";
+import { Contact } from "@/components/contact/Contact";
 import { projectsData } from "@/data/projects";
 
 export default function HomePage() {
   return (
-    <div className="relative w-full">
-      {/* =====================================================================
-          HERO SECTION — ATMOSPHERIC AURORA
-          ===================================================================== */}
-      <AuroraBackground intensity="full" className="w-full">
-        <Hero />
-      </AuroraBackground>
+    <AuroraBackground className="w-full">
+      {/* Hero Section */}
+      <Hero />
 
-      {/* Transition to About */}
-      <SectionTransition number="01" label="About & Academic Record" />
-
-      {/* =====================================================================
-          ABOUT & BACKGROUND
-          ===================================================================== */}
-      <About />
-
-      {/* Transition to Skills */}
-      <SectionTransition number="02" label="Verified Skills Taxonomy" />
-
-      {/* =====================================================================
-          VERIFIED SKILLS
-          ===================================================================== */}
-      <Skills />
-
-      {/* Transition to Works */}
-      <SectionTransition number="03" label="Selected Cinematic Showcases" />
-
-      {/* =====================================================================
-          PROJECT SHOWCASE (VIDEOS ENGINE)
-          ===================================================================== */}
-      <section id="work" className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="flex items-center gap-3 mb-6">
-          <span className="font-mono text-xs tracking-widest text-emerald-400">03 //</span>
-          <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone-400">
-            Selected Works & Motion Repertoire
+      {/* Selected Works Section */}
+      <section id="work" className="py-24 px-4 sm:px-6 max-w-6xl mx-auto border-t border-[#242220]">
+        <div className="mb-14">
+          <span className="font-mono text-xs uppercase tracking-widest text-[#736f69] block mb-2">
+            Selected Work
           </span>
-        </div>
-
-        <div className="mb-16 max-w-3xl">
-          <AnimatedText
-            text="Autonomous AI assistants, enterprise systems, and brand direction."
-            className="text-3xl sm:text-5xl font-serif text-[#fbfaf8] leading-[1.15]"
-          />
-          <p className="mt-4 font-mono text-xs text-stone-400">
-            * Every project incorporates verified engineering and production video assets.
+          <h2 className="text-3xl sm:text-5xl font-sans font-light tracking-tight text-[#dedad5] mb-4">
+            Works & Systems
+          </h2>
+          <p className="text-base text-[#b8b4ae] font-sans max-w-xl">
+            Autonomous desktop assistants, offline-first restaurant infrastructure, and production platforms.
           </p>
         </div>
 
-        {/* Project Gallery with all videos */}
         <ProjectGallery projects={projectsData} />
       </section>
 
-      {/* Transition to Experience */}
-      <SectionTransition number="04" label="Professional Journey" />
+      {/* Services & Technical Taxonomy */}
+      <Skills />
 
-      {/* =====================================================================
-          EXPERIENCE & TIMELINE
-          ===================================================================== */}
+      {/* Engineering Process (How It Works) */}
+      <Process />
+
+      {/* Journey & Experience */}
       <Experience />
 
-      {/* Transition to Contact */}
-      <SectionTransition number="05" label="Initiate Dialogue" />
+      {/* Quick Answers / FAQ */}
+      <FAQ />
 
-      {/* =====================================================================
-          CONTACT & DIRECT CHANNELS (SUBTLE AURORA REAPPEARANCE)
-          ===================================================================== */}
-      <AuroraBackground intensity="subtle" className="w-full">
-        <Contact />
-      </AuroraBackground>
-    </div>
+      {/* Direct Contact */}
+      <Contact />
+    </AuroraBackground>
   );
 }

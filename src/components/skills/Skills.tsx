@@ -1,23 +1,63 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { Terminal, Cpu, Palette, ShieldCheck, Sparkles, Binary, Layers } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { skillCategories } from "@/data/skills";
-import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import { AnimatedText } from "@/components/motion/AnimatedText";
+
+const services = [
+  {
+    title: "AI & Autonomous Systems",
+    tagline: "For teams building intelligent desktop, agentic, or local LLM workflows.",
+    focus: "CORE CAPABILITIES",
+    features: [
+      "Gemini Multimodal API integration",
+      "Screen perception & real-time OCR",
+      "Local vector memory graphs",
+      "Native Windows Win32 automation",
+      "Defensive security anomaly shields",
+    ],
+    timeline: "PROJECT SCOPE: 3-5 WEEKS",
+  },
+  {
+    title: "Full-Stack Web Architecture",
+    tagline: "For founders who need high-performance, edge-deployed web applications.",
+    focus: "CORE CAPABILITIES",
+    popular: true,
+    features: [
+      "Next.js 15 App Router & React 19",
+      "TypeScript strict-mode architecture",
+      "Real-time WebSockets & LAN sync",
+      "Payment rails (Stripe / PayPal / Wise)",
+      "Zero-lag Core Web Vitals profiling",
+    ],
+    timeline: "PROJECT SCOPE: 2-4 WEEKS",
+  },
+  {
+    title: "Creative Systems & UI Engineering",
+    tagline: "For brands that need an unmistakable digital presence and motion.",
+    focus: "CORE CAPABILITIES",
+    features: [
+      "Editorial typography & dark minimalist layouts",
+      "Motion for React hardware transforms",
+      "Custom vector illustrations & SVG avatars",
+      "Commercial brand identity & art direction",
+      "Accessible WCAG 2.1 AA compliance",
+    ],
+    timeline: "PROJECT SCOPE: 2-3 WEEKS",
+  },
+];
 
 export function Skills() {
   const [selectedTag, setSelectedTag] = useState<string>("ALL");
 
   const filterTabs = [
-    { label: "All Disciplines", tag: "ALL" },
-    { label: "Engineering & Code", tag: "ENGINEERING" },
+    { label: "All", tag: "ALL" },
+    { label: "Engineering", tag: "ENGINEERING" },
     { label: "AI & Automation", tag: "AI & INTELLIGENCE" },
     { label: "Web & Motion", tag: "WEB & MOTION" },
-    { label: "Physical Computing", tag: "PHYSICAL COMPUTING" },
+    { label: "Hardware", tag: "PHYSICAL COMPUTING" },
     { label: "Visual Arts", tag: "VISUAL ARTS" },
-    { label: "Cyber Defense", tag: "DEFENSIVE SECURITY" },
+    { label: "Security", tag: "DEFENSIVE SECURITY" },
   ];
 
   const displayedCategories =
@@ -26,117 +66,132 @@ export function Skills() {
       : skillCategories.filter((c) => c.tag === selectedTag);
 
   return (
-    <section id="skills" className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
-      {/* Meta header */}
-      <div className="flex items-center gap-3 mb-6">
-        <span className="font-mono text-xs tracking-widest text-emerald-400">02 //</span>
-        <span className="font-mono text-xs uppercase tracking-[0.25em] text-stone-400">
-          Verified Competencies & Taxonomy
+    <section id="services" className="py-24 px-4 sm:px-6 max-w-6xl mx-auto border-t border-[#242220]">
+      {/* Services Header */}
+      <div className="mb-14">
+        <span className="font-mono text-xs uppercase tracking-widest text-[#736f69] block mb-2">
+          Engineering Capabilities
         </span>
-      </div>
-
-      {/* Title */}
-      <div className="mb-12 max-w-3xl">
-        <AnimatedText
-          text="A balanced dual-discipline: Rigorous systems engineering and creative art direction."
-          className="text-3xl sm:text-5xl font-serif text-[#fbfaf8] leading-[1.15]"
-        />
-        <p className="mt-4 font-mono text-xs text-stone-400">
-          * Strictly verified from academic transcripts, professional deployments, and technical projects.
+        <h2 className="text-3xl sm:text-5xl font-sans font-light tracking-tight text-[#dedad5] mb-4">
+          Services
+        </h2>
+        <p className="text-base text-[#b8b4ae] font-sans max-w-xl">
+          From system architecture and autonomous agent pipelines to published, edge-optimized production apps.
         </p>
       </div>
 
-      {/* Filter Tabs */}
-      <div className="mb-12 flex flex-wrap gap-2 border-b border-white/10 pb-6">
-        {filterTabs.map((tab) => (
-          <button
-            key={tab.tag}
-            type="button"
-            onClick={() => setSelectedTag(tab.tag)}
-            className={`rounded-full px-4 py-2 font-mono text-xs transition-all duration-300 focus-visible:ring-2 focus-visible:ring-emerald-400 ${
-              selectedTag === tab.tag
-                ? "border border-emerald-400 bg-emerald-400/10 text-emerald-300 shadow-[0_0_15px_rgba(78,242,187,0.2)]"
-                : "border border-white/10 bg-[#14110e] text-stone-400 hover:border-white/20 hover:text-stone-200"
+      {/* Services 3-Card Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+        {services.map((service) => (
+          <div
+            key={service.title}
+            className={`relative rounded-2xl border bg-[#141312] p-6 sm:p-8 flex flex-col justify-between transition-colors duration-200 ${
+              service.popular
+                ? "border-[#3a3836] shadow-xl"
+                : "border-[#242220] hover:border-[#3a3836]"
             }`}
           >
-            {tab.label}
-          </button>
+            {service.popular && (
+              <span className="absolute -top-2.5 right-6 rounded-full bg-[#dedad5] px-2.5 py-0.5 text-[10px] font-mono font-medium text-[#0c0b0a] uppercase tracking-wider">
+                Popular
+              </span>
+            )}
+
+            <div>
+              <h3 className="font-sans text-xl font-medium text-[#dedad5] mb-2">
+                {service.title}
+              </h3>
+              <p className="font-sans text-xs text-[#736f69] mb-6 leading-relaxed">
+                {service.tagline}
+              </p>
+
+              <div className="border-t border-[#242220] pt-4 mb-4">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-[#736f69] block mb-3">
+                  {service.focus}
+                </span>
+                <ul className="space-y-2.5">
+                  {service.features.map((feat) => (
+                    <li key={feat} className="flex items-start gap-2.5 text-xs text-[#b8b4ae]">
+                      <Check className="h-3.5 w-3.5 text-[#dedad5] mt-0.5 shrink-0" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="border-t border-[#242220] pt-4 mt-6">
+              <span className="font-mono text-[10px] text-[#736f69] tracking-wider block">
+                {service.timeline}
+              </span>
+            </div>
+          </div>
         ))}
       </div>
 
-      {/* Category Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <AnimatePresence mode="popLayout">
-          {displayedCategories.map((category, catIndex) => (
-            <motion.div
-              key={category.tag}
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96 }}
-              transition={{ duration: 0.5, delay: catIndex * 0.05 }}
-              className="rounded-2xl border border-white/10 bg-[#14110e]/90 p-6 sm:p-8 flex flex-col justify-between hover:border-emerald-400/30 transition-all duration-300 shadow-xl"
+      {/* Verified Taxonomy & Stack */}
+      <div id="stack" className="pt-12 border-t border-[#242220]">
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <span className="font-mono text-xs uppercase tracking-widest text-[#736f69] block mb-1">
+              Technical Taxonomy
+            </span>
+            <h3 className="text-2xl font-sans font-light text-[#dedad5]">
+              Verified Tech Stack & Tools
+            </h3>
+          </div>
+
+          {/* Filter Tabs */}
+          <div className="flex flex-wrap gap-1.5">
+            {filterTabs.map((tab) => (
+              <button
+                key={tab.tag}
+                type="button"
+                onClick={() => setSelectedTag(tab.tag)}
+                className={`rounded-full px-3 py-1 font-mono text-xs transition-colors ${
+                  selectedTag === tab.tag
+                    ? "bg-[#dedad5] text-[#0c0b0a] font-medium"
+                    : "border border-[#242220] bg-[#141312] text-[#b8b4ae] hover:border-[#3a3836] hover:text-white"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {displayedCategories.map((cat) => (
+            <div
+              key={cat.tag}
+              className="rounded-xl border border-[#242220] bg-[#141312] p-5 flex flex-col justify-between"
             >
               <div>
-                {/* Header */}
-                <div className="flex items-center justify-between gap-4 mb-4">
-                  <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-emerald-400">
-                    {category.tag}
-                  </span>
-                  <span className="font-mono text-xs text-stone-500">
-                    {category.skills.length} Capabilities
-                  </span>
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-serif text-white mb-2">
-                  {category.title}
-                </h3>
-
-                <p className="text-stone-400 text-xs sm:text-sm font-sans mb-6 leading-relaxed">
-                  {category.description}
+                <span className="font-mono text-[10px] uppercase tracking-widest text-[#736f69] block mb-1">
+                  {cat.tag}
+                </span>
+                <h4 className="font-sans text-sm font-medium text-[#dedad5] mb-2">
+                  {cat.title}
+                </h4>
+                <p className="font-sans text-xs text-[#736f69] mb-4">
+                  {cat.description}
                 </p>
-
-                {/* Skill Items */}
-                <div className="grid grid-cols-1 gap-2.5">
-                  {category.skills.map((skill, i) => (
-                    <div
-                      key={i}
-                      className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-2 rounded-xl border p-3 transition-all ${
-                        skill.highlight
-                          ? "border-emerald-400/30 bg-emerald-500/[0.04] hover:bg-emerald-500/[0.08]"
-                          : "border-white/5 bg-[#181512] hover:border-white/15"
-                      }`}
-                    >
-                      <div className="flex items-center gap-2.5">
-                        <span
-                          className={`h-1.5 w-1.5 rounded-full ${
-                            skill.highlight ? "bg-emerald-400" : "bg-stone-500"
-                          }`}
-                        />
-                        <span className="font-medium text-sm text-stone-200 group-hover:text-white transition-colors">
-                          {skill.name}
-                        </span>
-                      </div>
-
-                      <div className="flex flex-wrap items-center gap-1.5 self-start sm:self-auto">
-                        {skill.tags?.map((t, idx) => (
-                          <span
-                            key={idx}
-                            className="font-mono text-[9px] uppercase tracking-wider text-stone-400 bg-white/5 px-2 py-0.5 rounded border border-white/5"
-                          >
-                            {t}
-                          </span>
-                        ))}
-                        <span className="font-mono text-[10px] text-emerald-300/80 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/20">
-                          {skill.level}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
-            </motion.div>
+
+              <div className="flex flex-wrap gap-1 border-t border-[#242220] pt-3">
+                {cat.skills.map((skill) => (
+                  <span
+                    key={skill.name}
+                    className="rounded border border-[#242220] bg-[#1a1918] px-2 py-0.5 font-mono text-[10px] text-[#b8b4ae]"
+                  >
+                    {skill.name}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
-        </AnimatePresence>
+        </div>
       </div>
     </section>
   );
