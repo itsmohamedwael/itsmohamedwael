@@ -1,36 +1,28 @@
-# MWAEL Autonomous Creative Engineering Directives
+# MWAEL Zero-Inheritance Autonomous Creative Directives
 
-## 1. Mission & Creative Philosophy
-This repository houses the personal, award-worthy interactive portfolio for **MWAEL** (Mohamed Abdelhamid / Mohamed Wael) — Computer Engineering scholar at The British University in Egypt, AI Software Engineer (creator of Clowdy), and Creative Visual Designer.
-
-The site is built as a bespoke, human-crafted editorial digital identity combining:
-- **Editorial Minimalism**: Asymmetrical layout discipline, generous negative space, high-contrast typography hierarchy.
-- **Atmospheric Depth**: Multi-layer Aurora Borealis lighting engine anchored on `#100e0b` with zero-lag GPU execution.
-- **Interactive Character**: Expressive 2D illustrated observer with spring-damped pointer tracking and contextual kinematics.
-- **Cinematic Showcase**: Mask-based reveals, horizontal/vertical adaptive gallery, and optimized video playback.
-- **Technical Rigor**: Strict adherence to verified academic and professional evidence from the official CV.
+## 1. Absolute Prohibition of Old Frontend Reuse
+1. **Never Import Legacy Components**: All files in the previous `src/components/hero/`, `src/components/navigation/`, `src/components/projects/`, `src/components/skills/`, `src/components/about/`, `src/components/contact/`, and `src/components/visual/` are permanently rejected and retired.
+2. **Never Import Legacy Styles**: The previous `aurora.css` and old `globals.css` color variables (`#100e0b`) are retired. The new visual foundation is **Pure Black (`#000000`)**.
+3. **Never Recreate Legacy Card Grids**: The UI must not resemble a generic card-based SaaS or boilerplate portfolio. It is an experimental minimalist editorial monograph.
 
 ---
 
-## 2. Invariant Engineering Rules
-1. **No Artificial UI Clichés**: Strictly prohibit cookie-cutter cards, garish rainbow gradients, fake skill percentages, and generic AI-generated templates.
-2. **Strict Evidence Verification**: Every skill, credential, timeline milestone, and project links strictly back to Mohamed's verified record.
-3. **Hardware-Accelerated Motion**: All animations must use `transform` and `opacity`. Strictly avoid animating layout dimensions (`width`, `height`, `margin`, `top`) or runtime CSS blurs (`filter: blur()`).
-4. **Adaptive Responsiveness**: Desktop interactions (horizontal pinned sequences, cursor pupil tracking) must gracefully transform into tailored mobile interactions (vertical cinematic flow, scroll/tap kinetics).
-5. **Zero Hydration Bottlenecks**: Strict separation between Next.js Server Components and client-side interactive boundaries.
+## 2. Core Creative Foundation
+- **Canvas Base**: Pure Black (`#000000`) with subtle editorial borders (`#222222`), muted zinc (`#71717a`), and stark optical white (`#ffffff`).
+- **Typography**: Asymmetric, monumental editorial scale. High-contrast typography paired with technical monospace metadata.
+- **Character**: Integrated directly into the black editorial layout with spring-damped pointer physics and pupil tracking. No photo toggle.
+- **Projects**: Cinematic fullscreen and split presentations showcasing real videos (Clowdy, ORYVEO, Creator Platform, Zen Brand, Arduino Navigator).
+- **Verified Credentials**: Mohamed Abdelhamid (Mohamed Wael), Computer Engineering at The British University in Egypt (BUE), 3.8 GPA preparatory honors.
+- **No Clichés**: House Burger is permanently banned. No fake skill percentage bars.
 
 ---
 
-## 3. Autonomous Skill System Alignment
-Every engineering agent working on this codebase must consult and adhere to the active skills in `.agent/skills/`:
-- `creative-direction`: Editorial minimalism, typography, and negative space.
-- `advanced-scroll`: GSAP ScrollTrigger pinning, scroll scrubbing, and timeline synchronization.
-- `motion-engineering`: Motion for React springs, gesture dynamics, and kinetic tokens.
-- `responsive-motion`: Viewport-specific motion strategies (320px–1920px).
-- `human-design`: Prevention of generic AI visual patterns; humanized copywriting.
-- `interactive-character`: 2D vector kinematics, pupil tracking, and context reactions.
-- `aurora-visuals`: 6-layer atmospheric Aurora Borealis specification and GPU optimization.
-- `project-showcase`: Video lifecycle management, IntersectionObserver streaming, and dynamic routes.
-- `performance`: Core Web Vitals (LCP ≤ 2.0s, CLS ≤ 0.05, INP ≤ 150ms).
-- `accessibility`: WCAG 2.1 AA compliance and `prefers-reduced-motion` support.
-- `visual-testing`: Cross-device verification, screenshot inspection, and layout stability.
+## 3. Autonomous Skill Routing
+Consult and follow the active instructions in `.agent/skills/`:
+- `from-scratch-design`: Zero-inheritance principles, editorial typography, asymmetric composition.
+- `advanced-motion`: Motion for React, spring physics, scroll scrubbing, GPU acceleration.
+- `responsive-scroll`: Viewport-specific strategies (320px–1920px), desktop horizontal/split vs mobile vertical stream.
+- `character-animation`: 2D vector kinematics, cursor tracking, idle breathing, squish physics.
+- `creative-direction`: Monograph layout, stark contrast, editorial restraint.
+- `performance`: 60fps/120fps budget, zero layout thrashing, Next.js Server/Client boundary discipline.
+- `visual-qa`: Automated multi-viewport verification, cross-device inspection, screenshot verification.

@@ -1,84 +1,63 @@
-import { ExperienceItem } from "@/types/portfolio";
+import { ExperienceEntry } from "../types";
 
-export const experienceTimeline: ExperienceItem[] = [
+export const experienceData: ExperienceEntry[] = [
   {
-    id: "clowdy-ai",
-    role: "AI Software Engineer (Independent Project)",
-    organization: "Clowdy Autonomous Systems",
-    location: "Remote · Egypt",
-    period: "Mar 2026 — Sep 2027",
-    type: "Engineering",
-    summary:
-      "Architected and implemented Clowdy, a sophisticated Python-based desktop AI assistant for Windows delivering real-time multimodal intelligence, autonomous system workflows, and custom interactive interface.",
-    achievements: [
-      "Integrated Gemini multimodal APIs for simultaneous audio-visual comprehension and zero-latency context retrieval.",
-      "Engineered real-time desktop screen analysis and autonomous application, file, reminder, calendar, and task execution engines.",
-      "Built resilient local memory graph and proactive notification daemon keeping personal workflows seamlessly synchronized.",
-      "Conceived ongoing defensive security layer for Clowdy to detect OS vulnerabilities and proactively isolate malicious threats.",
+    period: "2024 — Present",
+    role: "Computer Engineering Scholar (Honors Track)",
+    institution: "The British University in Egypt (BUE)",
+    location: "Cairo, Egypt",
+    type: "academic",
+    description:
+      "Pursuing a Bachelor of Science in Computer Engineering. Achieved a 3.8 GPA in preparatory studies, recognized on the Dean's Honors List for excellence in algorithmic problem-solving, discrete mathematics, and computer systems.",
+    highlights: [
+      "3.8 GPA Preparatory Honors distinction",
+      "Rigorous coursework in computational complexity, data structures, and digital logic",
+      "Active research focus on local multimodal AI perception and robotics kinematics",
     ],
-    technologies: ["Python", "Gemini API", "OpenCV", "Windows Win32 API", "Voice Synthesis", "Vector Memory", "Tk/Modern GUI"],
+    stack: ["C++", "Digital Logic", "Discrete Math", "Computer Architecture", "Algorithms"],
   },
   {
-    id: "bue-scholar",
-    role: "Computer Engineering Scholar & Student Leader",
-    organization: "The British University In Egypt (BUE)",
-    location: "El Sherouk City, Suez Desert Road, Cairo, Egypt",
-    period: "Sep 2025 — Jun 2028",
-    type: "Education",
-    summary:
-      "Pursuing Bachelor of Science in Computer Engineering with academic concentrations in electronic materials, electric circuits, digital logic design, algorithms, and technical computing.",
-    achievements: [
-      "Mastered low-level circuit analysis, logic gates synthesis, and electronic properties across rigorous lab coursework.",
-      "Spearheaded multi-student engineering capstones, presentations, and technical documentation earning high mentor recognition.",
-      "Cultivated deep mathematical and algorithmic foundations applied directly to AI and hardware-software systems.",
+    period: "2025 — Present",
+    role: "Lead AI Engineer & Architect",
+    institution: "Clowdy Open System Initiative",
+    location: "Cairo, Egypt",
+    type: "engineering",
+    description:
+      "Spearheading the engineering and architecture of Clowdy, an autonomous desktop-native multimodal AI companion engineered to orchestrate Windows system workflows via computer vision, associative memory, and natural voice.",
+    highlights: [
+      "Engineered real-time display buffer OCR perception pipeline",
+      "Created 100% private local vector memory retention graph",
+      "Implemented autonomous Win32 API task automation daemon",
     ],
-    technologies: ["C++", "Circuit Theory", "Digital Logic", "Data Structures", "Engineering Mathematics", "Physics"],
+    stack: ["Python", "Gemini API", "Computer Vision", "Win32 API", "Local Vector DB"],
   },
   {
-    id: "zen-local",
-    role: "Creative Director & Apparel Designer",
-    organization: "Zen Local Brand",
-    location: "Egypt",
     period: "2025 — 2026",
-    type: "Design",
-    summary:
-      "Conceptualized and directed streetwear apparel collection, combining bespoke distressed embroidery illustrations with high-fashion kinetic campaigns.",
-    achievements: [
-      "Directed seasonal launch campaigns and motion promotional materials spotlighting the Comino and Winter collections.",
-      "Authored custom equine and mythical digital artworks adapted for premium heavy-weight streetwear garments.",
-      "Coordinated production prototyping, textile graphics, and dynamic visual narrative across social media.",
+    role: "Full-Stack & Systems Engineer",
+    institution: "ORYVEO Restaurant OS",
+    location: "Cairo, Egypt",
+    type: "engineering",
+    description:
+      "Architected an offline-first distributed restaurant point-of-sale and kitchen display system designed to maintain 100% operational uptime without internet connectivity.",
+    highlights: [
+      "Designed zero-cloud local peer-to-peer WebSocket mesh network",
+      "Engineered direct ESC/POS hardware thermal printing protocols",
+      "Built high-contrast ergonomic KDS interface for high-stress kitchens",
     ],
-    technologies: ["Creative Direction", "Apparel Design", "Digital Illustration", "Motion Graphics", "Video Production"],
+    stack: ["React", "TypeScript", "Offline-First Sync", "Local WebSockets", "ESC/POS"],
   },
   {
-    id: "arduino-assistive",
-    role: "Assistive Device Hardware Developer",
-    organization: "Self-Initiated Assistive Tech Initiative",
-    location: "Ismailia, Egypt",
-    period: "May 2019 — May 2021",
-    type: "Hardware",
-    summary:
-      "Engineered an Arduino Uno-based smart obstacle avoidance and spatial navigation system for visually impaired individuals.",
-    achievements: [
-      "Integrated ultrasonic distance transducers with microsecond response loops to detect walls, drop-offs, and dynamic obstacles.",
-      "Designed custom printed/breadboard circuits with acoustic tone modulation mapping directly to obstacle proximity.",
-      "Conducted real-world navigational trials demonstrating improved user confidence and collision avoidance.",
+    period: "2024 — 2025",
+    role: "Embedded Robotics Engineer",
+    institution: "Autonomous Systems Lab",
+    location: "Cairo, Egypt",
+    type: "engineering",
+    description:
+      "Developed autonomous obstacle-avoidance rovers utilizing ultrasonic scanning, servo angle sweepers, and dual H-bridge motor drivers.",
+    highlights: [
+      "Engineered 180° spatial sonar evasion algorithms with sub-15ms loop latency",
+      "Implemented real-time PWM differential motor speed regulation in C++",
     ],
-    technologies: ["Arduino Uno", "C/C++ Embedded", "Ultrasonic Sensors", "Electronic Circuits", "Haptic/Audio Feedback"],
-  },
-  {
-    id: "liverpool-school",
-    role: "Preparatory High School Scholar (Honors)",
-    organization: "Liverpool Language School",
-    location: "Badr City, Cairo, Egypt",
-    period: "2023 — 2025",
-    type: "Education",
-    summary:
-      "Completed rigorous pre-engineering secondary curriculum with distinguished honors.",
-    achievements: [
-      "Graduated with Honors achieving cumulative GPA of 3.8 / 4.0.",
-      "Recipient of C++ Programming Training Certification and Digital Design Diploma.",
-    ],
-    technologies: ["Advanced Mathematics", "Physics", "Computer Science", "English Language Proficiency"],
+    stack: ["Embedded C++", "Arduino", "Ultrasonic Sonar", "L298N H-Bridge"],
   },
 ];

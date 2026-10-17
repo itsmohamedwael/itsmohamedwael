@@ -1,44 +1,26 @@
-import { Profile } from "@/types/portfolio";
-
-export const profileData: Profile = {
+export const profileData = {
   name: "Mohamed Abdelhamid",
-  brandName: "MWAEL",
-  title: "AI Software Engineer & Digital Art Designer",
-  tagline: "Merging computational intelligence with distinctive visual craftsmanship.",
-  bio: "Computer Engineering scholar at The British University in Egypt and multidisciplinary technologist with 3+ years in visual design and deep expertise in Python, C++, and AI agent architectures. Creator of Clowdy—an autonomous multimodal desktop assistant—and architect of responsive, high-performance digital ecosystems.",
-  location: "Cairo, Egypt · El Sherouk",
-  email: "contact.mohamedwael.v@gmail.com",
-  phone: "+201212549545",
-  website: "https://itsmohamedwael.info/",
-  cvPdfPath: "/Mohamed_Wael_CV.pdf",
-  avatarPath: "/character/mohamed-portrait.jpg",
-  logoPath: "/logo/mw-logo.png",
+  alias: "Mohamed Wael",
+  initials: "MWAEL",
+  title: "AI Software Engineer & Creative Visual Designer",
+  location: "Cairo, Egypt",
+  timezone: "Africa/Cairo (GMT+3)",
+  academic: {
+    institution: "The British University in Egypt (BUE)",
+    degree: "B.Sc. in Computer Engineering",
+    gpa: "3.8 GPA (Preparatory Honors)",
+    expectedGraduation: "2029",
+  },
+  narrative: {
+    lead: "Engineering autonomous intelligent systems and high-contrast digital artifacts at the intersection of machine perception and editorial minimalism.",
+    statement:
+      "I am an AI software engineer, computer engineering scholar, and visual designer dedicated to building resilient software architectures. Creator of Clowdy—an autonomous Windows desktop AI companion with real-time screen vision and associative memory—and architect of zero-dependency offline enterprise systems.",
+  },
   socials: {
-    website: "https://itsmohamedwael.info/",
+    github: "https://github.com/itsmohamedwael",
     linkedin: "https://www.linkedin.com/in/itsmohamedwael-9b220830b/",
     instagram: "https://www.instagram.com/its_mohamedwael_/",
-    github: "https://github.com/itsmohamedwael",
+    email: "itsmohamedwael@gmail.com",
   },
-  metrics: [
-    {
-      label: "Visual Art & Design",
-      value: "03+",
-      detail: "Years shaping brand identities, UI systems, and campaigns",
-    },
-    {
-      label: "Software & AI Eng.",
-      value: "02+",
-      detail: "Years engineering C++, Python, and desktop AI automation",
-    },
-    {
-      label: "Verified Sales Growth",
-      value: "+25%",
-      detail: "Measurable commercial impact through design systems",
-    },
-    {
-      label: "Academic Honors",
-      value: "3.8",
-      detail: "GPA graduation honors in engineering preparatory studies",
-    },
-  ],
+  status: "Available for ambitious engineering & creative commissions",
 };

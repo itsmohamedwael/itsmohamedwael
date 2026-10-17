@@ -1,98 +1,46 @@
-import { SkillCategory } from "@/types/portfolio";
+import { SkillGroup } from "../types";
 
-export const skillCategories: SkillCategory[] = [
+export const skillsData: SkillGroup[] = [
   {
-    title: "Programming & Core Engineering",
-    tag: "ENGINEERING",
-    description:
-      "Low-level algorithmic thinking, systems programming, and high-level application development.",
-    skills: [
-      { name: "C++", level: "Advanced", highlight: true, tags: ["OOP", "Data Structures", "Systems"] },
-      { name: "Python", level: "Advanced", highlight: true, tags: ["AI Agents", "Automation", "OpenCV"] },
-      { name: "Java", level: "Proficient", tags: ["OOP", "Enterprise Architecture"] },
-      { name: "TypeScript / JS", level: "Proficient", highlight: true, tags: ["Modern Web", "React", "Next.js"] },
-      { name: "C / Embedded C", level: "Proficient", tags: ["Microcontrollers", "Firmware"] },
-      { name: "Data Structures & Algorithms", level: "Core", tags: ["BUE Computer Engineering"] },
+    domain: "Machine Intelligence & Systems",
+    tagline: "Multimodal perception, desktop automation, and local associative memory",
+    items: [
+      { name: "Python", level: "Specialist", category: "Languages" },
+      { name: "Gemini Multimodal API", level: "Specialist", category: "AI & Vision" },
+      { name: "Computer Vision & OCR", level: "Advanced", category: "AI & Vision" },
+      { name: "Speech Synthesis & Audio Pipelines", level: "Advanced", category: "AI & Vision" },
+      { name: "Win32 System Automation", level: "Advanced", category: "Systems & Cloud" },
+      { name: "Local Vector Memory Graphs", level: "Specialist", category: "AI & Vision" },
+      { name: "Embedded C / C++", level: "Core", category: "Languages" },
+      { name: "Autonomous Hardware Robotics", level: "Core", category: "Systems & Cloud" },
     ],
   },
   {
-    title: "Artificial Intelligence & Automation",
-    tag: "AI & INTELLIGENCE",
-    description:
-      "Autonomous agent execution, multimodal APIs, desktop automation, and conversational voice engines.",
-    skills: [
-      { name: "Gemini Multimodal APIs", level: "Advanced", highlight: true, tags: ["Vision", "LLM", "Prompt Ops"] },
-      { name: "Desktop Automation Daemon", level: "Specialized", highlight: true, tags: ["Windows API", "Clowdy Core"] },
-      { name: "Real-Time Voice Interaction", level: "Specialized", tags: ["Speech-to-Text", "TTS Pipeline"] },
-      { name: "Computer Vision & Screen Analysis", level: "Specialized", tags: ["Screen OCR", "Context Perception"] },
-      { name: "Local Memory & Vector Retrieval", level: "Proficient", tags: ["Persistent State", "Context Windows"] },
-      { name: "Autonomous Task Execution", level: "Specialized", highlight: true, tags: ["File Ops", "System Control"] },
+    domain: "Full-Stack Architecture & Distributed Protocols",
+    tagline: "High-performance reactive interfaces and offline-first mesh networks",
+    items: [
+      { name: "TypeScript", level: "Specialist", category: "Languages" },
+      { name: "Next.js (App Router / SSR)", level: "Specialist", category: "Frameworks" },
+      { name: "React 19 / Modern React", level: "Specialist", category: "Frameworks" },
+      { name: "Distributed Local WebSockets", level: "Advanced", category: "Systems & Cloud" },
+      { name: "Tailwind CSS Architecture", level: "Specialist", category: "Frameworks" },
+      { name: "RESTful & Real-Time APIs", level: "Advanced", category: "Systems & Cloud" },
+      { name: "ESC/POS Thermal Printing Protocols", level: "Core", category: "Systems & Cloud" },
+      { name: "PostgreSQL & Relational Data", level: "Advanced", category: "Systems & Cloud" },
     ],
   },
   {
-    title: "Web Architecture & Interface Motion",
-    tag: "WEB & MOTION",
-    description:
-      "Modern server-driven web ecosystems, micro-interactions, and 60fps kinetic design systems.",
-    skills: [
-      { name: "Next.js (App Router)", level: "Advanced", highlight: true, tags: ["RSC", "SSR", "SEO"] },
-      { name: "React", level: "Advanced", highlight: true, tags: ["Hooks", "State Architecture"] },
-      { name: "Motion for React", level: "Advanced", highlight: true, tags: ["Spring Kinetics", "useScroll", "Transforms"] },
-      { name: "Tailwind CSS", level: "Advanced", tags: ["Design Systems", "Fluid Clamps"] },
-      { name: "Responsive Engineering", level: "Advanced", tags: ["Mobile-First", "Container Queries"] },
-      { name: "Web Accessibility (WCAG 2.1)", level: "Core", tags: ["Keyboard Nav", "ARIA", "Reduced Motion"] },
-    ],
-  },
-  {
-    title: "Hardware, Circuits & Embedded Systems",
-    tag: "PHYSICAL COMPUTING",
-    description:
-      "Hardware-software bridging, assistive sensor networks, and circuit board prototyping.",
-    skills: [
-      { name: "Arduino Uno", level: "Specialized", highlight: true, tags: ["Assistive Devices", "Real-Time I/O"] },
-      { name: "Electronic Materials & Circuits", level: "Core", tags: ["BUE Engineering Coursework"] },
-      { name: "Digital Systems & Logic Gates", level: "Certified", tags: ["Digital Design Diploma"] },
-      { name: "Ultrasonic & IoT Sensors", level: "Specialized", tags: ["Distance Feedback", "Obstacle Detection"] },
-      { name: "Circuit Prototyping & Testing", level: "Proficient", tags: ["Breadboarding", "Oscilloscopes"] },
-    ],
-  },
-  {
-    title: "Digital Art & Creative Direction",
-    tag: "VISUAL ARTS",
-    description:
-      "Brand identity systems, motion graphics, commercial advertising, and multidisciplinary arts.",
-    skills: [
-      { name: "Digital Art Design", level: "3+ Years", highlight: true, tags: ["Creative Direction", "Brand Architecture"] },
-      { name: "Brand & Logo Identity", level: "3+ Years", highlight: true, tags: ["MWAEL", "Typography", "Geometry"] },
-      { name: "Motion Graphic Design", level: "Proficient", tags: ["Kinetic Brand Reveals", "Video Production"] },
-      { name: "Apparel & Textile Graphics", level: "Specialized", tags: ["Zen Local Brand", "Streetwear Capsule"] },
-      { name: "Audio Production & Synthesis", level: "Creative", tags: ["Sound Design", "Audio Production"] },
-      { name: "Piano Performance", level: "Artistic", tags: ["Classical & Contemporary Harmony"] },
-    ],
-  },
-  {
-    title: "Upcoming: Proactive Cybersecurity",
-    tag: "DEFENSIVE SECURITY",
-    description:
-      "Next-generation defensive mechanisms integrated into intelligent desktop environments.",
-    skills: [
-      { name: "Defensive Security Systems", level: "In Development", highlight: true, tags: ["Clowdy Shield"] },
-      { name: "Vulnerability Identification", level: "Active Focus", tags: ["Threat Modeling", "Audit"] },
-      { name: "Proactive Threat Detection", level: "Active Focus", tags: ["Host Monitoring", "Safe Operations"] },
-      { name: "Secure Desktop Operations", level: "Active Focus", tags: ["Process Sandboxing", "Access Control"] },
-    ],
-  },
-  {
-    title: "Analytical & Professional Disciplines",
-    tag: "ANALYTICS & LEADERSHIP",
-    description:
-      "Methodical research, data interpretation, technical authorship, and team orchestration.",
-    skills: [
-      { name: "Academic Research & Methodology", level: "Core", tags: ["Peer Collaboration", "BUE"] },
-      { name: "Technical Report Writing", level: "Proficient", tags: ["Engineering Specifications"] },
-      { name: "Data Analysis & Synthesis", level: "Proficient", tags: ["Telemetry", "Metrics Interpretation"] },
-      { name: "Team Leadership & Presentations", level: "Demonstrated", tags: ["Peer Reviews", "Mentorship"] },
-      { name: "Critical Thinking & Problem-Solving", level: "Core", tags: ["First-Principles Reasoning"] },
+    domain: "Creative Direction & Interaction Engineering",
+    tagline: "Editorial typography, 60fps kinetic physics, and bespoke digital artifacts",
+    items: [
+      { name: "Motion for React (motion/react)", level: "Specialist", category: "Design & Creative" },
+      { name: "GSAP & ScrollTrigger Kinematics", level: "Advanced", category: "Design & Creative" },
+      { name: "Editorial Typographic Hierarchy", level: "Specialist", category: "Design & Creative" },
+      { name: "Vector Illustration & Kinematics", level: "Advanced", category: "Design & Creative" },
+      { name: "Pointer Physics & Spring Damping", level: "Specialist", category: "Design & Creative" },
+      { name: "Responsive Viewport Engineering", level: "Specialist", category: "Design & Creative" },
+      { name: "Core Web Vitals Optimization", level: "Specialist", category: "Systems & Cloud" },
+      { name: "Accessibility (WCAG 2.1 AA)", level: "Advanced", category: "Design & Creative" },
     ],
   },
 ];

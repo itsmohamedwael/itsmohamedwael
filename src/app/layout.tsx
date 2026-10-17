@@ -1,86 +1,64 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { ScrollProgress } from "@/components/motion/ScrollProgress";
-import { Header } from "@/components/navigation/Header";
-import { Footer } from "@/components/navigation/Footer";
-import { profileData } from "@/data/profile";
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-editorial",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-  display: "swap",
-});
+import { NoiseOverlay } from "../components/visual/NoiseOverlay";
+import { profileData } from "../data/profile";
 
 export const viewport: Viewport = {
-  themeColor: "#100e0b",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://itsmohamedwael.info"),
+  metadataBase: new URL("https://www.itsmohamedwael.info"),
   title: {
-    default: "MWAEL — Mohamed Abdelhamid | AI Software Engineer & Visual Designer",
+    default: "MWAEL — Mohamed Abdelhamid | AI Systems Architect & Visual Designer",
     template: "%s | MWAEL",
   },
   description:
-    "Official award-worthy interactive portfolio of Mohamed Abdelhamid (Mohamed Wael) — Computer Engineering scholar, AI Software Engineer (creator of Clowdy), and Digital Art Designer based in Cairo, Egypt.",
+    "Official portfolio monograph of Mohamed Abdelhamid (Mohamed Wael). Computer Engineering scholar at The British University in Egypt (3.8 GPA Honors), creator of Clowdy desktop AI, and architect of offline enterprise systems.",
   keywords: [
     "Mohamed Abdelhamid",
     "Mohamed Wael",
     "MWAEL",
-    "itsmohamedwael",
-    "AI Software Engineer",
-    "Creative Developer",
+    "Clowdy AI",
+    "The British University in Egypt",
     "Computer Engineering",
-    "British University in Egypt",
-    "Clowdy Assistant",
-    "Digital Art Design",
-    "Cairo Egypt",
+    "AI Software Engineer",
+    "Desktop AI Companion",
+    "Offline-First Systems",
+    "Creative Developer",
   ],
-  authors: [{ name: "Mohamed Abdelhamid", url: "https://itsmohamedwael.info" }],
-  creator: "Mohamed Abdelhamid (MWAEL)",
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/logo/mw-logo-white.png",
-  },
+  authors: [{ name: "Mohamed Abdelhamid (Mohamed Wael)", url: "https://www.itsmohamedwael.info" }],
+  creator: "Mohamed Abdelhamid",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://itsmohamedwael.info",
-    title: "MWAEL — Mohamed Abdelhamid | AI Software Engineer & Visual Designer",
+    url: "https://www.itsmohamedwael.info",
+    title: "MWAEL — Mohamed Abdelhamid | AI Systems Architect",
     description:
-      "Award-worthy, ultra-minimal interactive portfolio combining computational AI engineering, embedded systems, and high-end visual art direction.",
-    siteName: "MWAEL Portfolio",
+      "Official portfolio monograph of Mohamed Abdelhamid (Mohamed Wael). Creator of Clowdy desktop AI companion, BUE Computer Engineering 3.8 GPA honors.",
+    siteName: "MWAEL Portfolio Monograph",
     images: [
       {
-        url: "/images/itsmohamedwael-hero.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MWAEL Studio Portfolio",
+        alt: "MWAEL — Mohamed Abdelhamid Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MWAEL — Mohamed Abdelhamid | AI Software Engineer & Visual Designer",
+    title: "MWAEL — Mohamed Abdelhamid",
     description:
-      "Computational AI systems, embedded robotics, and luxury digital craftsmanship.",
-    images: ["/images/itsmohamedwael-hero.jpg"],
+      "AI Systems Architect & Visual Designer. BUE Computer Engineering 3.8 GPA honors, creator of Clowdy.",
+    images: ["/og-image.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/logo/mw-logo-white.png",
   },
   robots: {
     index: true,
@@ -93,80 +71,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Rich JSON-LD Structured Data (Person & WebSite)
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://itsmohamedwael.info/#person",
-        name: profileData.name,
-        alternateName: [profileData.brandName, "Mohamed Wael", "itsmohamedwael"],
-        jobTitle: profileData.title,
-        url: profileData.website,
-        email: profileData.email,
-        telephone: profileData.phone,
-        image: "https://itsmohamedwael.info/character/mohamed-portrait.jpg",
-        sameAs: [
-          profileData.socials.linkedin,
-          profileData.socials.instagram,
-          profileData.socials.github,
-        ],
-        alumniOf: {
-          "@type": "CollegeOrUniversity",
-          name: "The British University In Egypt (BUE)",
-        },
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Cairo",
-          addressCountry: "Egypt",
-        },
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://itsmohamedwael.info/#website",
-        url: "https://itsmohamedwael.info",
-        name: "MWAEL — Interactive Portfolio",
-        publisher: {
-          "@id": "https://itsmohamedwael.info/#person",
-        },
-      },
+    "@type": "Person",
+    name: profileData.name,
+    alternateName: profileData.alias,
+    jobTitle: profileData.title,
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: profileData.academic.institution,
+    },
+    url: "https://www.itsmohamedwael.info",
+    sameAs: [
+      profileData.socials.linkedin,
+      profileData.socials.instagram,
+      profileData.socials.github,
+    ],
+    knowsAbout: [
+      "Multimodal Artificial Intelligence",
+      "Computer Vision",
+      "Desktop System Automation",
+      "Distributed Offline POS Networks",
+      "Computer Engineering",
+      "Creative Motion Design",
     ],
   };
 
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} scroll-smooth`}
-    >
+    <html lang="en" className="dark bg-black">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#100e0b] text-[#f5f2eb] font-sans selection:bg-white/10 selection:text-white">
-        {/* Skip to Content Link (Accessibility) */}
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-emerald-400 focus:px-4 focus:py-2 focus:text-black focus:font-mono focus:text-xs"
-        >
-          Skip to main content
-        </a>
-
-        {/* Global Kinetic Scroll Indicator */}
-        <ScrollProgress />
-
-        {/* Main Floating Header */}
-        <Header />
-
-        {/* Page Stacking Content */}
-        <main id="main-content" className="relative z-10 min-h-screen">
-          {children}
-        </main>
-
-        {/* Minimalist Footer */}
-        <Footer />
+      <body className="min-h-screen bg-black text-white antialiased selection:bg-white selection:text-black">
+        <NoiseOverlay />
+        {children}
       </body>
     </html>
   );

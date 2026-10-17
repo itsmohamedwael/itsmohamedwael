@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-base: #100e0b;
+    --text-primary: #fbfaf8;
+    --text-muted: #a6a096;
+    --text-stone: #635e55;
+    --accent-mint: #4ef2bb;
+    --accent-blue: #3b82f6;
+    --accent-purple: #a855f7;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Custom Selection */
+  ::selection {
+    background: rgba(78, 242, 187, 0.25);
+    color: #fbfaf8;
+  }
+
+  /* Minimal custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #100e0b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(78, 242, 187, 0.4);
+  }
+}
+
+/* Accessibility Focus Visible */
+*:focus-visible {
+  outline: 2px solid var(--accent-mint);
+  outline-offset: 3px;
+}
+
+/* Utility for text gradients */
+.text-gradient-aurora {
+  background: linear-gradient(135deg, #fbfaf8 0%, #4ef2bb 50%, #60efff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-subtle {
+  background: linear-gradient(180deg, #fbfaf8 20%, #a6a096 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Editorial line mask */
+.mask-line {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

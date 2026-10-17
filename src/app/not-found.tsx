@@ -1,31 +1,24 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-import { AuroraBackground } from "@/components/visual/AuroraBackground";
 
 export default function NotFound() {
   return (
-    <AuroraBackground intensity="minimal" className="min-h-screen flex items-center justify-center px-4">
-      <div className="text-center max-w-lg space-y-6">
-        <span className="font-mono text-xs tracking-widest text-emerald-400 uppercase">
-          Error 404 // Lost in Orbit
-        </span>
-        <h1 className="text-4xl sm:text-6xl font-serif text-white">
-          Coordinates Not Found
-        </h1>
-        <p className="text-stone-400 text-sm sm:text-base font-sans">
-          The requested project dossier or resource does not exist or has migrated to another sector.
-        </p>
-        <div>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 font-mono text-xs uppercase tracking-widest text-white hover:border-emerald-400 hover:text-emerald-300 transition-all"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            <span>Return to Portfolio</span>
-          </Link>
-        </div>
-      </div>
-    </AuroraBackground>
+    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 text-center selection:bg-white selection:text-black">
+      <span className="font-mono text-xs text-neutral-600 tracking-widest uppercase mb-4">
+        // ERROR 404 // ROUTE UNMAPPED
+      </span>
+      <h1 className="text-6xl sm:text-8xl font-light tracking-tighter text-white">
+        VOID<span className="font-serif italic text-neutral-500">.</span>
+      </h1>
+      <p className="mt-4 font-mono text-xs text-neutral-400 max-w-sm">
+        The requested system coordinate does not exist in this archive.
+      </p>
+      <Link
+        href="/"
+        className="mt-8 px-6 py-3 rounded-full border border-neutral-800 bg-neutral-950 font-mono text-xs text-white hover:border-neutral-500 transition-colors uppercase"
+      >
+        Return to Monograph ←
+      </Link>
+    </main>
   );
 }

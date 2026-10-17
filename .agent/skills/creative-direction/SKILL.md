@@ -1,29 +1,24 @@
 ---
 name: creative-direction
-description: Enforce a coherent, highly original editorial portfolio design and typographic hierarchy for MWAEL.
+description: Enforce a coherent, highly original editorial portfolio design and typographic hierarchy for MWAEL on a pure black canvas.
 ---
 
-# Creative Direction Skill
+# Creative Direction Directives
 
-## When to Use
-Apply this skill whenever creating or refactoring page layouts, selecting color pairings, designing typographic systems, structuring visual hierarchy, or establishing negative space across the portfolio.
+## 1. Editorial Minimalist Monograph
+- The portfolio is an avant-garde digital monograph celebrating high-performance systems engineering, AI architecture, and creative visual development.
+- The visual tone is intellectual, sharp, architectural, and restrained.
+- Primary Canvas: Pure Black (`#000000`).
 
-## Implementation Instructions
-1. **Editorial Composition**:
-   - Structure sections like spreads in an independent design publication or architectural monograph.
-   - Use intentional asymmetry (e.g., left-aligned heavy headline balanced by right-aligned metadata badge or floating interactive observer).
-   - Maintain generous vertical whitespace (`py-28 md:py-40`) to let high-impact concepts resonate.
-2. **Typography Hierarchy**:
-   - Editorial display titles: High-contrast headings paired with tight tracking (`-0.03em` to `-0.05em`).
-   - Clean Swiss body prose: Geometric sans-serif at `1rem` with `leading-relaxed` (1.65).
-   - Monospace accents: Uppercase metadata pills, live GMT+3 Cairo coordinates, and verified tech tags (`text-xs tracking-[0.15em] font-mono`).
-3. **Restrained Color Architecture**:
-   - Anchor the root canvas in `#100e0b` (warm obsidian).
-   - Reserve vibrant atmospheric colors (emerald, cyan, violet) strictly for ambient lighting depth and micro-interactive highlights.
-4. **Originality Guardrails**:
-   - Strictly prohibit generic SaaS templates, cookie-cutter 3-column feature cards, rainbow border gradients, and excessive glassmorphism.
+## 2. Typographic Discipline
+- **Display Scale**: Monumental serif/sans pairings with dramatic contrast. Title typography spans across viewport columns with tight tracking.
+- **Body & Editorial Copy**: Crisp, readable sans-serif set in neutral zinc tones (`#e4e4e7` / `#a1a1aa`).
+- **Technical Ledger**: Clean monospace typography (`font-mono`) for dates, tags, coordinates, metrics, and metadata.
 
-## Completion Criteria
-- Every section feels bespoke and art-directed.
-- Visual hierarchy guides the user effortlessly without visual noise.
-- Layout remains visually distinct from any pre-made portfolio template.
+## 3. Strict Content Verification
+- Mohamed Abdelhamid (Mohamed Wael).
+- Computer Engineering scholar at The British University in Egypt (BUE).
+- 3.8 GPA preparatory honors.
+- Lead Architect of Clowdy (Autonomous Desktop AI Assistant).
+- Verified Projects: Clowdy, ORYVEO, Creator Platform, Zen Brand, Arduino Navigator.
+- House Burger is strictly eliminated and banned.

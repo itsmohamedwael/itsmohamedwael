@@ -1,68 +1,39 @@
 import React from "react";
-import { AuroraBackground } from "@/components/visual/AuroraBackground";
-import { Hero } from "@/components/hero/Hero";
-import { About } from "@/components/about/About";
-import { ProjectGallery } from "@/components/projects/ProjectGallery";
-import { Skills } from "@/components/skills/Skills";
-import { Process } from "@/components/process/Process";
-import { Experience } from "@/components/experience/Experience";
-import { FAQ } from "@/components/faq/FAQ";
-import { Contact } from "@/components/contact/Contact";
-import { projectsData } from "@/data/projects";
+import { MinimalNav } from "../components/nav/MinimalNav";
+import { EditorialHero } from "../components/hero/EditorialHero";
+import { CinematicShowcase } from "../components/work/CinematicShowcase";
+import { MonographAbout } from "../components/about/MonographAbout";
+import { KineticMatrix } from "../components/skills/KineticMatrix";
+import { LedgerTimeline } from "../components/experience/LedgerTimeline";
+import { MonolithContact } from "../components/contact/MonolithContact";
+import { EditorialFooter } from "../components/footer/EditorialFooter";
 
-/**
- * HomePage — Complete MWAEL Portfolio Experience
- * Editorial Minimalism + Expressive Motion + Digital Character + Atmospheric Lighting
- */
 export default function HomePage() {
   return (
-    <AuroraBackground className="w-full">
-      {/* 01. Signature Cinematic Hero */}
-      <Hero />
+    <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
+      {/* Architectural Navigation */}
+      <MinimalNav />
 
-      {/* 02. Editorial About & First Principles */}
-      <About />
+      {/* Monumental Editorial Hero with Observer Character */}
+      <EditorialHero />
 
-      {/* 03. Selected Works & Video Showcase */}
-      <section
-        id="work"
-        className="py-24 sm:py-32 px-4 sm:px-6 max-w-6xl mx-auto border-t border-[#242220]"
-      >
-        <div className="mb-14">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="font-mono text-xs tracking-widest text-emerald-400">
-              03 //
-            </span>
-            <span className="font-mono text-xs uppercase tracking-widest text-[#736f69]">
-              Verified Systems & Engineering
-            </span>
-          </div>
-          <h2 className="text-3xl sm:text-5xl font-sans font-light tracking-tight text-[#f5f2eb] mb-4">
-            Selected Works
-          </h2>
-          <p className="text-base text-[#b8b4ae] font-sans max-w-xl leading-relaxed">
-            Autonomous desktop daemons, offline-first restaurant infrastructure,
-            creator monetization platforms, and assistive embedded hardware.
-          </p>
-        </div>
+      {/* Cinematic Showcase of Selected Works */}
+      <CinematicShowcase />
 
-        <ProjectGallery projects={projectsData} />
-      </section>
+      {/* Editorial Monograph & Verified Academic Pedigree */}
+      <MonographAbout />
 
-      {/* 04. Services & Technical Taxonomy */}
-      <Skills />
+      {/* Interactive Capability Matrix & Technical Taxonomy */}
+      <KineticMatrix />
 
-      {/* 05. Engineering Process (How It Works) */}
-      <Process />
+      {/* Chronological Engineering Ledger */}
+      <LedgerTimeline />
 
-      {/* 06. Experience & Academic Chronology */}
-      <Experience />
+      {/* Monumental Direct Contact Protocol */}
+      <MonolithContact />
 
-      {/* 07. Quick Answers / FAQ */}
-      <FAQ />
-
-      {/* 08. Direct Inquiry / Contact */}
-      <Contact />
-    </AuroraBackground>
+      {/* Minimal Architectural Footer */}
+      <EditorialFooter />
+    </main>
   );
 }
