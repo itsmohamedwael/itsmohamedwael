@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="40" viewBox="0 0 230 40" fill="none">
+  <defs>
+    <linearGradient id="btnOryveoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B00" />
+      <stop offset="100%" stop-color="#FF4B2B" />
+    </linearGradient>
+    <filter id="btnOryveoGlow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#FF6B00" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="1.5" y="1.5" width="227" height="37" rx="18.5" fill="url(#btnOryveoGrad)" filter="url(#btnOryveoGlow)"/>
+  <rect x="2" y="2" width="226" height="36" rx="18" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- Rocket / Key Icon -->
+  <g transform="translate(18, 11)">
+    <path d="M10 2c-3.5 0-6 2.5-7 5.5l1.5 1.5c.5-.5 1-1 2-1.5l1 1-2.5 2.5 1.5 1.5 2.5-2.5 1 1c-.5 1-1 1.5-1.5 2l1.5 1.5C12.5 11 15 8.5 15 5c0-.5 0-1-.5-1.5L10 2zm-6 10l-2 4 4-2-2-2z" fill="#FFFFFF"/>
+  </g>
+  <text x="42" y="24" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" letter-spacing="0.2">
+    Unlock ORYVEO ($10) ➔
+  </text>
+</svg>
