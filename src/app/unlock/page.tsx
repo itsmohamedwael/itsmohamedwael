@@ -6,8 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { Lock, Unlock, CheckCircle, ArrowRight, ShieldAlert, KeyRound } from "lucide-react";
 
 const VALID_PINS = ["ORY-9842-K9TX-7731", "ORY-9842", "9842"];
-const LAVA_TIP_URL =
-  "https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info";
+const LAVA_TIP_URL = "https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5";
 
 function UnlockContent() {
   const searchParams = useSearchParams();

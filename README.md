@@ -84,7 +84,7 @@
       </ul>
       <p align="center">
         <a href="https://itsmohamedwael.info/unlock"><b>🔑 Enter PIN to Unlock ORYVEO ➔</b></a><br/>
-        <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info"><small><i>(Don't have a PIN? Send a Tip on Lava.top to receive it)</i></small></a>
+        <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5"><small><i>(Don't have a PIN? Send a Tip on Lava.top to receive it)</i></small></a>
       </p>
     </td>
   </tr>
