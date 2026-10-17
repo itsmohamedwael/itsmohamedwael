@@ -15,8 +15,8 @@ export const profileData: Profile = {
   logoPath: "/logo/mw-logo.png",
   socials: {
     website: "https://itsmohamedwael.info/",
-    linkedin: "https://www.linkedin.com/in/mohamedwael",
-    instagram: "https://instagram.com/itsmohamedwael",
+    linkedin: "https://www.linkedin.com/in/itsmohamedwael-9b220830b/",
+    instagram: "https://www.instagram.com/its_mohamedwael_/",
     github: "https://github.com/itsmohamedwael",
   },
   metrics: [
