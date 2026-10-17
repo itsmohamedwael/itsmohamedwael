@@ -48,14 +48,14 @@
     <a href="https://github.com/itsmohamedwael">
       <img src="https://img.shields.io/badge/GitHub-itsmohamedwael-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
     </a>
-    <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5" target="_blank" rel="noopener noreferrer">
+    <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info" target="_blank" rel="noopener noreferrer">
       <img src="https://img.shields.io/badge/Support%20%26%20Tip-Lava.top-FF6B00?style=for-the-badge&logo=kofi&logoColor=white" alt="Tip on Lava" />
     </a>
   </p>
 
   <!-- Dedicated Glowing Lava Tip Button -->
   <p align="center">
-    <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5" target="_blank" rel="noopener noreferrer">
+    <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info" target="_blank" rel="noopener noreferrer">
       <img src="assets/tip-button.svg" alt="☕ Leave a Tip on Lava.top" height="46" />
     </a>
   </p>
@@ -253,7 +253,7 @@
     <a href="https://github.com/itsmohamedwael">
       <img src="https://img.shields.io/badge/GitHub-Follow%20@itsmohamedwael-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
     </a>
-    <a href="https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5" target="_blank" rel="noopener noreferrer">
+    <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info" target="_blank" rel="noopener noreferrer">
       <img src="https://img.shields.io/badge/☕%20Support%20on%20Lava.top-FF6B00?style=for-the-badge&logo=kofi&logoColor=white" alt="Tip on Lava" />
     </a>
   </p>
