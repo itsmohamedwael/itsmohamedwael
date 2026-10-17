@@ -4,7 +4,12 @@
 
 <div align="center">
 
-  <img src="assets/avatar.png" alt="Mohamed Wael Monogram" width="115" style="border-radius: 50%; filter: drop-shadow(0 0 22px rgba(0, 212, 255, 0.45)); margin-bottom: 8px;" />
+  <p align="center">
+    <a href="https://itsmohamedwael.info">
+      <img src="assets/mw-logo-white.png#gh-dark-mode-only" alt="Mohamed Wael Monogram" width="185" style="filter: drop-shadow(0 0 24px rgba(0, 212, 255, 0.45)); margin-bottom: 10px;" />
+      <img src="assets/mw-logo-dark.png#gh-light-mode-only" alt="Mohamed Wael Monogram" width="185" style="filter: drop-shadow(0 0 16px rgba(0, 0, 0, 0.15)); margin-bottom: 10px;" />
+    </a>
+  </p>
 
   # 👋 Hey, I'm Mohamed Wael (MWAEL)
 
