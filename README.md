@@ -68,10 +68,10 @@
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">💼 <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info">ORYVEO — POS &amp; Growth Suite</a></h3>
+      <h3 align="center">💼 <a href="https://itsmohamedwael.info/unlock">ORYVEO — POS &amp; Growth Suite</a></h3>
       <p align="center">
         <img src="https://img.shields.io/badge/Status-🔒%20Locked%20(Tip%20Required)-FF416C?style=flat-square&logo=kofi&logoColor=white" />
-        <img src="https://img.shields.io/badge/Access-Secret%20PIN%20Required-00D4FF?style=flat-square&logo=1password&logoColor=white" />
+        <a href="https://itsmohamedwael.info/unlock"><img src="https://img.shields.io/badge/Unlock-Enter%20PIN%20Here-00D4FF?style=flat-square&logo=1password&logoColor=white" alt="Enter PIN" /></a>
       </p>
       <p>
         Enterprise Restaurant Point-of-Sale (POS) and Kitchen Display System (KDS) engineered for ultra-fast order processing, synchronized inventory management, and intelligent kitchen analytics.
@@ -79,11 +79,12 @@
       <ul>
         <li>⚡ <b>Real-Time Sync:</b> Zero-latency order routing via WebSockets.</li>
         <li>📊 <b>Operations:</b> Real-time kitchen load balancing and revenue analytics.</li>
-        <li>🔒 <b>Access Control:</b> Proprietary code &amp; live demo sandbox are locked. <b>Cannot unlock except by sending a tip.</b></li>
-        <li>🔑 <b>Already Tipped?</b> You will receive a secret verification <b>PIN</b> on Lava.top after payment. Send an email with your <b>GitHub Username + Secret PIN</b> to <a href="mailto:mohamed261207@bue.edu.eg"><code>mohamed261207@bue.edu.eg</code></a> to get instant repo access!</li>
+        <li>🔒 <b>Access Control:</b> Proprietary code &amp; live demo sandbox are locked. <b>Requires a secret PIN to unlock.</b></li>
+        <li>🔑 <b>Have a PIN?</b> Click below to enter your secret PIN and unlock access immediately!</li>
       </ul>
       <p align="center">
-        <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info"><b>🔒 Send a Tip on Lava.top to Get Secret PIN ➔</b></a>
+        <a href="https://itsmohamedwael.info/unlock"><b>🔑 Enter PIN to Unlock ORYVEO ➔</b></a><br/>
+        <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info"><small><i>(Don't have a PIN? Send a Tip on Lava.top to receive it)</i></small></a>
       </p>
     </td>
   </tr>
