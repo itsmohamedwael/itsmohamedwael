@@ -1,121 +1,177 @@
-# PROJECT MWAEL — Ultra-Minimal, High-Performance Interactive Portfolio
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:040A12,30:061524,65:007a99,100:00d4ff&height=180&section=header&text=Mohamed%20Wael&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI%20Software%20Engineer%20%E2%80%A2%20Autonomous%20Agents%20%E2%80%A2%20Full-Stack%20Architect&descAlignY=60&descAlign=50" width="100%" alt="Mohamed Wael Header Wave" />
+</p>
 
-> An award-worthy, high-performance personal portfolio for **Mohamed Abdelhamid** (**MWAEL** / **itsmohamedwael**) — Computer Engineering Scholar, AI Software Engineer, and Multidisciplinary Digital Art Designer.
+<div align="center">
 
----
+  <img src="assets/avatar.png" alt="Mohamed Wael Monogram" width="115" style="border-radius: 50%; filter: drop-shadow(0 0 22px rgba(0, 212, 255, 0.45)); margin-bottom: 8px;" />
 
-## ✦ Key Architecture & Highlights
+  # 👋 Hey, I'm Mohamed Wael (MWAEL)
 
-1. **Atmospheric Aurora Borealis Background**
-   - Implemented via the authoritative 6-layer gradient specification blending against the obsidian base `#100e0b`.
-   - Responsive blur radii (85px–175px mobile, 108px–252px desktop) with hardware-accelerated GPU translate drifts.
-   - SVG analog film-grain texture (`feTurbulence` fractalNoise, 4 octaves, 0.7 frequency, `mix-blend-mode: overlay`).
+  <p align="center">
+    <a href="https://readme-typing-svg.demolab.com">
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1200&color=00D4FF&center=true&vcenter=true&width=850&lines=AI+Software+Engineer+%26+Autonomous+Agent+Architect;Creator+of+Clowdy+%E2%80%94+Next-Gen+Desktop+AI+Companion;Computer+Engineering+Scholar+%40+BUE+%F0%9F%8E%93;Full-Stack+Next.js+15%2C+TypeScript+%26+Modern+Systems;Native+Egyptian+Arabic+%2B+Multilingual+AI+Voice;Windows+OS+Automation+%26+Computer+Vision+Specialist" alt="Typing SVG" />
+    </a>
+  </p>
 
-2. **Interactive Articulated Character**
-   - Bespoke vectorized alter-ego representing Mohamed Wael's likeness, curly dark hair, and expressive demeanor.
-   - Pointer physics tracking using `useSpring` and `useMotionValue` from `motion/react`.
-   - Autonomous blinking cadence (every 3.5s–7s) and eye pupil tracking.
-   - Click squish physics with interactive confetti burst.
-   - Dual-mode switch between **Articulated Vector Character** and **Verified Studio Portrait**.
-   - Full graceful degradation under `prefers-reduced-motion`.
+  <p align="center">
+    <img src="assets/audio-visualizer.svg" alt="Audio Spectrum" width="520" />
+  </p>
 
-3. **Cinematic Showcase Video Engine**
-   - Viewport-aware autonomous video playback using `IntersectionObserver` (threshold 0.35).
-   - High-fidelity poster frame fallbacks (zero Cumulative Layout Shift).
-   - PlaysInline, muted previews with explicit audio and play/pause controls.
-   - Dynamic `/work/[slug]` case study dossier routes.
+  <p align="center">
+    <b>Computer Engineering Scholar @ The British University in Egypt (BUE) • AI Systems Architect</b><br/>
+    <i>Pioneering real-time multimodal AI agents, autonomous OS robotics, and ultra-high performance digital experiences.</i>
+  </p>
 
-4. **Editorial Typography & Dark Aesthetics**
-   - High-contrast Playfair Display headings paired with Swiss modern sans-serif and tabular JetBrains Mono micro-labels.
-   - Strict color restraint anchored on `#100e0b` obsidian, ivory `#fbfaf8`, and aurora mint/cyan `#4ef2bb`.
-   - Mobile-first responsive fluid scaling using CSS `clamp()`.
+  <p align="center">
+    <a href="https://itsmohamedwael.info"><img src="https://img.shields.io/badge/Portfolio-itsmohamedwael.info-00D4FF?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Portfolio" /></a>
+    <a href="https://github.com/itsmohamedwael"><img src="https://img.shields.io/badge/GitHub-itsmohamedwael-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+    <a href="mailto:mohamed261207@bue.edu.eg"><img src="https://img.shields.io/badge/Email-Get%20In%20Touch-00FF88?style=for-the-badge&logo=gmail&logoColor=black" alt="Email" /></a>
+    <a href="https://komarev.com/ghpvc/?username=itsmohamedwael&color=00d4ff&style=for-the-badge"><img src="https://komarev.com/ghpvc/?username=itsmohamedwael&color=00d4ff&style=for-the-badge" alt="Profile Views" /></a>
+  </p>
 
-5. **100% Verified Credentials & Taxonomy**
-   - Computer Engineering at The British University in Egypt (BUE).
-   - Pre-engineering honors graduate (GPA 3.8 / 4.0).
-   - C++ Programming Training and Digital Design Diploma.
-   - Flagship projects: **Clowdy** Desktop AI Assistant, **ORYVEO** POS/KDS Suite, **Creator Monetization Platform**, **ZEN Local Brand**, **House Burger** UI (+25% sales), and **Arduino Assistive Obstacle Navigator**.
+  <p align="center">
+    <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info" target="_blank" rel="noopener noreferrer">
+      <img src="assets/tip-button.svg" alt="☕ Leave a Tip on Lava.top" height="46" style="margin-top: 4px;"/>
+    </a>
+  </p>
 
----
-
-## ✦ Tech Stack
-
-- **Framework**: Next.js 15 (App Router, Server Components)
-- **Language**: TypeScript (Strict Mode)
-- **Animation**: Motion for React (`motion/react`)
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Micro-Interactions**: Canvas Confetti
-- **Typography**: Next/Font Google (Playfair Display, Inter, JetBrains Mono)
+</div>
 
 ---
 
-## ✦ Project Structure
+## 🚀 Flagship Engineering Projects
 
-```
-portofolio/
-├── AGENTS.md                          # Creative engineering agent directives
-├── .agent/
-│   └── skills/                        # Bespoke Antigravity skills
-│       ├── portfolio-design/SKILL.md
-│       ├── creative-motion/SKILL.md
-│       ├── aurora-background/SKILL.md
-│       ├── interactive-character/SKILL.md
-│       ├── performance-engineering/SKILL.md
-│       ├── responsive-engineering/SKILL.md
-│       ├── project-showcase/SKILL.md
-│       ├── accessibility-seo/SKILL.md
-│       └── quality-assurance/SKILL.md
-├── public/
-│   ├── logo/                          # Official MW monogram (transparent & soft-white)
-│   ├── character/                     # Verified studio photographic portrait
-│   ├── videos/                        # Showcase project videos
-│   │   └── posters/                   # High-res poster frames
-│   ├── images/                        # Clowdy, branding, and product graphics
-│   └── Mohamed_Wael_CV.pdf            # Authoritative CV download
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx                 # Root layout with JSON-LD schema & SEO
-│   │   ├── page.tsx                   # Interactive portfolio home
-│   │   ├── globals.css                # Fluid clamp styles & design tokens
-│   │   ├── sitemap.ts                 # Dynamic sitemap
-│   │   ├── robots.ts                  # Search engine robots
-│   │   ├── not-found.tsx              # Bespoke 404 page
-│   │   └── work/[slug]/page.tsx       # Dynamic project dossiers
-│   ├── components/
-│   │   ├── visual/AuroraBackground.tsx
-│   │   ├── character/InteractiveCharacter.tsx
-│   │   ├── hero/Hero.tsx
-│   │   ├── navigation/Header.tsx & Footer.tsx
-│   │   ├── motion/                    # Kinetic primitives (ScrollReveal, AnimatedText, MagneticButton...)
-│   │   ├── projects/                  # Video engine & showcase cards
-│   │   ├── skills/                    # Verified skills taxonomy
-│   │   ├── experience/                # Timeline of roles & education
-│   │   └── contact/                   # Verified channels & copy-email action
-│   ├── hooks/                         # Pointer tracking, spring kinetics, character state
-│   ├── data/                          # Strongly typed profile, skills, experience, projects
-│   ├── styles/aurora.css              # Authoritative 6-layer CSS spec
-│   ├── lib/utils.ts
-│   └── types/portfolio.ts
-├── package.json
-├── tsconfig.json
-└── next.config.ts
-```
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">☁️ <a href="https://github.com/itsmohamedwael/getclowdy">Clowdy — Desktop AI Companion</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Gemini%203.6%20Flash-Live%20Audio-00D4FF?style=flat-square&logo=google" />
+        <img src="https://img.shields.io/badge/Python-Windows%20Automation-00FF88?style=flat-square&logo=python" />
+      </p>
+      <p>
+        Next-gen autonomous desktop AI companion featuring <b>real-time bidirectional audio streaming (&lt;300ms RTT)</b>, native Egyptian dialect (العامية المصرية), authentic Arabic Maqam singing, screen perception, and deep Windows OS automation.
+      </p>
+      <ul>
+        <li>⚡ <b>Live Voice:</b> Full-duplex WebSocket stream with interruptibility.</li>
+        <li>👁️ <b>Computer Vision:</b> Real-time frame differencing & active app awareness.</li>
+        <li>🔐 <b>Security:</b> Windows DPAPI credential vault & hardware authorization.</li>
+      </ul>
+      <p align="center">
+        <a href="https://github.com/itsmohamedwael/getclowdy"><b>Explore Repository ➔</b></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">💼 <a href="https://itsmohamedwael.info">ORYVEO — POS &amp; Growth Suite</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Next.js%2015-React%2019-white?style=flat-square&logo=next.js" />
+        <img src="https://img.shields.io/badge/TypeScript-Full--Stack-3178C6?style=flat-square&logo=typescript" />
+      </p>
+      <p>
+        Enterprise-grade Restaurant Point-of-Sale (POS) and Kitchen Display System (KDS) engineered for ultra-fast order processing, synchronized inventory management, and intelligent kitchen analytics.
+      </p>
+      <ul>
+        <li>⚡ <b>Real-Time Sync:</b> Zero-latency order routing via WebSockets.</li>
+        <li>📊 <b>Operations:</b> Real-time kitchen load balancing and revenue analytics.</li>
+        <li>🎨 <b>Interface:</b> Touch-optimized glassmorphic dark UI.</li>
+      </ul>
+      <p align="center">
+        <a href="https://itsmohamedwael.info"><b>View Case Study ➔</b></a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">🌐 <a href="https://itsmohamedwael.info">Interactive Portfolio &amp; Aurora Engine</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Tailwind-CSS%203-38B2AC?style=flat-square&logo=tailwind-css" />
+        <img src="https://img.shields.io/badge/Motion-React-FF4154?style=flat-square&logo=framer" />
+      </p>
+      <p>
+        Award-worthy personal portfolio featuring a <b>6-layer Aurora Borealis gradient drift</b>, physics-based character tracking, dynamic video showcase engine, and strict 60fps interaction rendering.
+      </p>
+      <p align="center">
+        <a href="https://itsmohamedwael.info"><b>Visit itsmohamedwael.info ➔</b></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">👕 <a href="https://itsmohamedwael.info">ZEN Local Brand — E-Commerce</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/E--Commerce-Shopify%20%2F%20Custom-96BF48?style=flat-square&logo=shopify" />
+        <img src="https://img.shields.io/badge/UI%2FUX-Design%20System-FF61F6?style=flat-square&logo=figma" />
+      </p>
+      <p>
+        Bespoke digital storefront and brand identity for a premium streetwear label, designed for rapid conversion, micro-interactions, and visual storytelling.
+      </p>
+      <p align="center">
+        <a href="https://itsmohamedwael.info"><b>View Brand Project ➔</b></a>
+      </p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## ✦ Local Development & Production Verification
+## 🛠️ Technology Arsenal & Stack
 
-```bash
-# Run development server
-npm run dev
+<div align="center">
 
-# Run TypeScript strict validation
-npm run type-check
+| Domain | Technologies & Frameworks |
+| :--- | :--- |
+| **🧠 Artificial Intelligence & Vision** | `Google Gemini Live API` • `PyTorch` • `OpenCV` • `Agentic Workflows` • `WebSockets` • `PyAudio` |
+| **⚡ Full-Stack & Web** | `Next.js 15 (App Router)` • `React 19` • `TypeScript` • `Node.js` • `Tailwind CSS` • `Framer Motion` |
+| **💻 Systems & OS Automation** | `Python 3.12+` • `Windows pywin32 / DPAPI` • `C++ (Modern)` • `PowerShell / CMD` • `MSS Screen Capture` |
+| **🗄️ Databases & Infrastructure** | `PostgreSQL` • `SQLite` • `Docker` • `Git / GitHub CI/CD` • `Linux (Ubuntu / Kali)` |
+| **🎨 Creative UI/UX & Motion** | `Figma` • `Adobe Creative Suite` • `Design Systems` • `Canvas & Confetti Kinetics` |
 
-# Run production build
-npm run build
+</div>
 
-# Start production server
-npm run start
-```
+---
+
+## 📊 Live GitHub Analytics & Telemetry
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td valign="top" width="50%">
+        <img src="https://github-readme-stats.vercel.app/api?username=itsmohamedwael&show_icons=true&theme=tokyonight&hide_border=true&bg_color=050e17&title_color=00d4ff&icon_color=00ff88&text_color=e0f7fa" width="100%" alt="Mohamed Wael GitHub Stats" />
+      </td>
+      <td valign="top" width="50%">
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=itsmohamedwael&theme=tokyonight&hide_border=true&background=050e17&ring=00d4ff&fire=00ff88&currStreakLabel=00d4ff" width="100%" alt="GitHub Streak Stats" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=itsmohamedwael&layout=compact&theme=tokyonight&hide_border=true&bg_color=050e17&title_color=00d4ff&text_color=e0f7fa" width="60%" alt="Top Languages" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 💬 Get In Touch & Connect
+
+<div align="center">
+
+  <p>Whether you're looking to build cutting-edge AI agents, high-performance web platforms, or explore collaborations, feel free to reach out:</p>
+
+  <a href="https://itsmohamedwael.info" target="_blank">
+    <img src="https://img.shields.io/badge/Website-itsmohamedwael.info-00D4FF?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Website" />
+  </a>
+  <a href="mailto:mohamed261207@bue.edu.eg">
+    <img src="https://img.shields.io/badge/Email-mohamed261207@bue.edu.eg-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://github.com/itsmohamedwael">
+    <img src="https://img.shields.io/badge/GitHub-Follow%20@itsmohamedwael-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info" target="_blank">
+    <img src="https://img.shields.io/badge/Lava.top-Leave%20a%20Tip%20%E2%98%95-FF416C?style=for-the-badge&logo=kofi&logoColor=white" alt="Tip on Lava" />
+  </a>
+
+</div>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,35:007a99,70:061524,100:040A12&height=120&section=footer" width="100%" alt="Footer Wave" />
+</p>
