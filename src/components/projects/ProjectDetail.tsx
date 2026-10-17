@@ -14,7 +14,7 @@ interface ProjectDetailProps {
 
 export function ProjectDetail({ project, nextProject }: ProjectDetailProps) {
   return (
-    <article className="min-h-screen bg-[#0c0b0a] text-[#dedad5] pt-28 pb-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <article className="min-h-screen bg-[#100e0b] text-[#f5f2eb] pt-28 pb-24 px-4 sm:px-6 max-w-6xl mx-auto">
       {/* Back button */}
       <div className="mb-10">
         <Link

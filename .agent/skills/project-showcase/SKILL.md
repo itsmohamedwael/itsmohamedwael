@@ -3,28 +3,30 @@ name: project-showcase
 description: Video playback lifecycle, IntersectionObserver orchestration, dynamic project routes, and media presentation.
 ---
 
-# Project Showcase & Video Engine Skill
+# Project Showcase Skill
 
-## 1. Showcase Architecture
-- Each featured project combines:
-  - High-definition video loop with auto-pause out of viewport
-  - Poster fallback image
-  - Project Title & Category taxonomy
-  - Verified technical stack tags
-  - Narrative impact description
-  - Link to deep-dive `/work/[slug]` route
+## When to Use
+Apply this skill when structuring showcase video components, managing video autoplay lifecycles, building project galleries, or implementing dynamic case study pages (`/work/[slug]`).
 
-## 2. Dynamic Project Route `/work/[slug]`
-- Strongly typed parameters backed by `src/data/projects.ts`.
-- Structured presentation:
-  - Hero project header & video player with custom accessible controls
-  - Problem space & architectural solution
-  - Technology breakdown with exact roles (e.g. Gemini 1.5 Pro API, OpenCV screen analysis, Python desktop daemon, Arduino distance sensors)
-  - Key achievements and metrics
-  - Seamless navigation to previous/next projects
+## Implementation Instructions
+1. **Showcase Video Lifecycle**:
+   - Every video must have a lightweight JPEG poster fallback (`/videos/posters/poster-...jpg`).
+   - Use `preload="none"` on offscreen videos to avoid saturating network bandwidth on initial page load.
+   - Attach an `IntersectionObserver`: When video is out of view, call `.pause()`.
+   - Maximize playback performance: Use hover-to-play on desktop or viewport-centered tap-to-play on mobile.
+2. **Verified Project Portfolio**:
+   - Ensure all verified showcase works are represented:
+     1. `Clowdy AI Assistant`
+     2. `Oryveo Restaurant Operations Suite`
+     3. `Creator Affiliate Registration Platform`
+     4. `ZEN Local Brand`
+     5. `Assistive Haptic & Acoustic Obstacle Navigator`
+   - House Burger and unrelated placeholder projects must remain strictly excluded.
+3. **Dynamic Project Route Experience (`/work/[slug]`)**:
+   - SSG generation via `generateStaticParams()`.
+   - Rich case study dossier: Problem statement, technical architecture, verified technologies, impact metrics, and outbound links.
+   - Smooth page transitions with native browser back/forward support.
 
-## 3. Autonomous Video Engine Lifecycle
-- Use native HTML5 `<video>` controlled via React `useRef` and `IntersectionObserver`.
-- Attributes: `autoPlay`, `loop`, `muted`, `playsInline`, `preload="metadata"`.
-- Observer threshold `0.35`: Trigger `video.play()` smoothly when entered, `video.pause()` when exited.
-- Audio toggle: Provide explicit mute/unmute toggle control with clear visual indicator.
+## Completion Criteria
+- Video playback is instant, smooth, and pauses cleanly when navigating away.
+- All 5 verified projects load with accurate metadata and working video/poster assets.

@@ -12,7 +12,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-[#242220] bg-[#0c0b0a] py-12 px-4 sm:px-6">
+    <footer className="border-t border-[#242220] bg-[#100e0b] py-12 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left: Monogram and title */}
         <div className="flex items-center gap-3">

@@ -62,7 +62,7 @@ export const skillCategories: SkillCategory[] = [
     description:
       "Brand identity systems, motion graphics, commercial advertising, and multidisciplinary arts.",
     skills: [
-      { name: "Digital Art Design", level: "3+ Years", highlight: true, tags: ["Creative Direction", "House Burger"] },
+      { name: "Digital Art Design", level: "3+ Years", highlight: true, tags: ["Creative Direction", "Brand Architecture"] },
       { name: "Brand & Logo Identity", level: "3+ Years", highlight: true, tags: ["MWAEL", "Typography", "Geometry"] },
       { name: "Motion Graphic Design", level: "Proficient", tags: ["Kinetic Brand Reveals", "Video Production"] },
       { name: "Apparel & Textile Graphics", level: "Specialized", tags: ["Zen Local Brand", "Streetwear Capsule"] },

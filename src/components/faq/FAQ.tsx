@@ -32,7 +32,7 @@ const faqs: FAQItem[] = [
   {
     question: "Can I inspect your verified academic and engineering credentials?",
     answer:
-      "Yes. You can download my complete verified CV directly from the header or hero section. It details my Computer Engineering coursework at Helwan University (GPA 3.4/4.0), production deployments, and technical achievements.",
+      "Yes. You can download my complete verified CV directly from the header or hero section. It details my Computer Engineering coursework at The British University in Egypt (BUE) with 3.8 GPA honors, production deployments, and technical achievements.",
   },
 ];
 

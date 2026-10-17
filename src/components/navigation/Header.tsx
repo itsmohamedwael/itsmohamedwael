@@ -23,6 +23,7 @@ export function Header({ activeSection = "hero" }: HeaderProps) {
 
   const navLinks = [
     { label: "Works", href: "#work" },
+    { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Process", href: "#process" },
     { label: "Stack", href: "#stack" },
@@ -34,7 +35,7 @@ export function Header({ activeSection = "hero" }: HeaderProps) {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#0c0b0a]/90 border-b border-[#242220] py-3.5"
+            ? "bg-[#100e0b]/90 backdrop-blur-md border-b border-[#242220] py-3.5"
             : "bg-transparent py-5"
         }`}
       >

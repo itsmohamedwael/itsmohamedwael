@@ -1,25 +1,36 @@
-# MWAEL Portfolio — Autonomous Creative Engineering Directives
+# MWAEL Autonomous Creative Engineering Directives
 
-## Architecture & Mission
-This repository houses the personal, award-worthy interactive portfolio for **MWAEL** (Mohamed Abdelhamid / Mohamed Wael) — Computer Engineering scholar, AI Software Engineer, and Creative Visual Designer.
+## 1. Mission & Creative Philosophy
+This repository houses the personal, award-worthy interactive portfolio for **MWAEL** (Mohamed Abdelhamid / Mohamed Wael) — Computer Engineering scholar at The British University in Egypt, AI Software Engineer (creator of Clowdy), and Creative Visual Designer.
 
-The site is built as a high-performance, dark atmospheric, editorial experience combining:
-- Extreme minimalism and disciplined whitespace
-- Multi-layered Aurora Borealis ambient lighting engine
-- Interactive illustrated character with pointer-physics tracking
-- High-impact showcase videos with autonomous viewport playback
-- Deeply-typed project dossiers and verified technical taxonomy
-- 60fps transform-based motion orchestration via `motion/react`
+The site is built as a bespoke, human-crafted editorial digital identity combining:
+- **Editorial Minimalism**: Asymmetrical layout discipline, generous negative space, high-contrast typography hierarchy.
+- **Atmospheric Depth**: Multi-layer Aurora Borealis lighting engine anchored on `#100e0b` with zero-lag GPU execution.
+- **Interactive Character**: Expressive 2D illustrated observer with spring-damped pointer tracking and contextual kinematics.
+- **Cinematic Showcase**: Mask-based reveals, horizontal/vertical adaptive gallery, and optimized video playback.
+- **Technical Rigor**: Strict adherence to verified academic and professional evidence from the official CV.
 
-## Codebase Principles
-1. **No Artificial Templates**: Every component is bespoke, handcrafted, and free of generic UI framework cliches (no cookie-cutter SaaS cards, no uncontrolled glassmorphism, no garish rainbow gradients).
-2. **Strict Verification**: Every skill, credential, timeline entry, and project links strictly back to Mohamed's verified academic and professional record.
-3. **Motion with Purpose**: All animations must use hardware-accelerated transforms (`transform`, `opacity`) with spring physics. Avoid animating `filter: blur()` or layout properties (`width`, `height`, `margin`) during runtime loops.
-4. **Resilient Accessibility**: All interactive elements must support keyboard navigation, explicit ARIA descriptions, and full graceful degradation under `prefers-reduced-motion: reduce`.
-5. **Zero Hydration Clutter**: Strict separation between Server Components (SEO metadata, content layout, structured data) and Client Components (motion, canvas, pointer tracking).
+---
 
-## Team Role Guidance
-- **Creative Director & UI/UX**: Enforce typography hierarchy (`Playfair`/editorial display + Swiss sans body), strict palette anchored on `#100e0b` with aurora accents, and editorial layouts.
-- **Motion Engineer**: Leverage `motion/react` (`useScroll`, `useTransform`, `useSpring`, `useMotionValue`, `AnimatePresence`).
-- **Performance Engineer**: Enforce Core Web Vitals (LCP ≤ 2.5s, CLS ≤ 0.1, INP ≤ 200ms, Lighthouse 95+ target).
-- **QA Specialist**: Strict TypeScript type-checking, zero build errors, zero horizontal overflow at 320px–1920px.
+## 2. Invariant Engineering Rules
+1. **No Artificial UI Clichés**: Strictly prohibit cookie-cutter cards, garish rainbow gradients, fake skill percentages, and generic AI-generated templates.
+2. **Strict Evidence Verification**: Every skill, credential, timeline milestone, and project links strictly back to Mohamed's verified record.
+3. **Hardware-Accelerated Motion**: All animations must use `transform` and `opacity`. Strictly avoid animating layout dimensions (`width`, `height`, `margin`, `top`) or runtime CSS blurs (`filter: blur()`).
+4. **Adaptive Responsiveness**: Desktop interactions (horizontal pinned sequences, cursor pupil tracking) must gracefully transform into tailored mobile interactions (vertical cinematic flow, scroll/tap kinetics).
+5. **Zero Hydration Bottlenecks**: Strict separation between Next.js Server Components and client-side interactive boundaries.
+
+---
+
+## 3. Autonomous Skill System Alignment
+Every engineering agent working on this codebase must consult and adhere to the active skills in `.agent/skills/`:
+- `creative-direction`: Editorial minimalism, typography, and negative space.
+- `advanced-scroll`: GSAP ScrollTrigger pinning, scroll scrubbing, and timeline synchronization.
+- `motion-engineering`: Motion for React springs, gesture dynamics, and kinetic tokens.
+- `responsive-motion`: Viewport-specific motion strategies (320px–1920px).
+- `human-design`: Prevention of generic AI visual patterns; humanized copywriting.
+- `interactive-character`: 2D vector kinematics, pupil tracking, and context reactions.
+- `aurora-visuals`: 6-layer atmospheric Aurora Borealis specification and GPU optimization.
+- `project-showcase`: Video lifecycle management, IntersectionObserver streaming, and dynamic routes.
+- `performance`: Core Web Vitals (LCP ≤ 2.0s, CLS ≤ 0.05, INP ≤ 150ms).
+- `accessibility`: WCAG 2.1 AA compliance and `prefers-reduced-motion` support.
+- `visual-testing`: Cross-device verification, screenshot inspection, and layout stability.

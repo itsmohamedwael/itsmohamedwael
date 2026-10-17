@@ -63,15 +63,15 @@ export function Hero() {
           </div>
 
           <p className="text-base sm:text-lg text-[#b8b4ae] font-sans leading-relaxed max-w-xl">
-            Computer Engineering scholar at <span className="text-[#dedad5]">Helwan University</span>.
-            I design and build autonomous agent workflows, offline-first enterprise systems, and hyper-refined web experiences — combining low-level systems logic with editorial design.
+            Computer Engineering scholar at <span className="text-[#dedad5]">The British University in Egypt (BUE)</span>.
+            I architect autonomous multimodal AI assistants, offline-first infrastructure, and high-performance digital experiences — bridging low-level systems engineering with luxury visual direction.
           </p>
 
           {/* Action Row */}
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link
               href="#work"
-              className="inline-flex items-center gap-2 rounded-full bg-[#dedad5] px-5 py-2.5 font-sans text-xs font-medium text-[#0c0b0a] hover:bg-white transition-all shadow-sm"
+              className="inline-flex items-center gap-2 rounded-full bg-[#f5f2eb] px-5 py-2.5 font-sans text-xs font-medium text-[#100e0b] hover:bg-white transition-all shadow-sm"
             >
               <span>Selected Works</span>
               <ArrowDown className="h-3.5 w-3.5" />
@@ -81,7 +81,7 @@ export function Hero() {
               href="/Mohamed_Wael_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-[#242220] bg-[#141312] px-5 py-2.5 font-sans text-xs text-[#dedad5] hover:border-[#3a3836] hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-[#242220] bg-[#171512] px-5 py-2.5 font-sans text-xs text-[#dedad5] hover:border-[#3a3836] hover:text-white transition-colors"
             >
               <Download className="h-3.5 w-3.5" />
               <span>Download CV</span>
@@ -99,11 +99,11 @@ export function Hero() {
 
         {/* Right: Interactive Character Stage */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
-          <div className="w-full max-w-sm rounded-2xl border border-[#242220] bg-[#141312]/70 p-6 flex flex-col items-center shadow-lg">
+          <div className="w-full max-w-sm rounded-2xl border border-[#242220] bg-[#171512]/80 backdrop-blur-sm p-6 flex flex-col items-center shadow-2xl">
             <InteractiveCharacter compact={false} />
             <div className="mt-4 pt-4 border-t border-[#242220] w-full flex items-center justify-between text-[11px] font-mono text-[#736f69]">
               <span>MWAEL AVATAR</span>
-              <span>VERIFIED TALENT</span>
+              <span className="text-emerald-400">POINTER TRACKING</span>
             </div>
           </div>
         </div>
@@ -113,19 +113,19 @@ export function Hero() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-[#242220] pt-6 mt-12 font-mono text-xs">
         <div>
           <span className="text-[#736f69] block text-[10px] uppercase">Education</span>
-          <span className="text-[#dedad5] font-medium">Helwan University</span>
+          <span className="text-[#dedad5] font-medium">British Univ. in Egypt</span>
         </div>
         <div>
           <span className="text-[#736f69] block text-[10px] uppercase">Degree / GPA</span>
-          <span className="text-[#dedad5] font-medium">Computer Eng. (3.4 / 4.0)</span>
+          <span className="text-[#dedad5] font-medium">B.Eng (3.8 GPA Honors)</span>
         </div>
         <div>
-          <span className="text-[#736f69] block text-[10px] uppercase">Core Focus</span>
-          <span className="text-[#dedad5] font-medium">AI & Full-Stack</span>
+          <span className="text-[#736f69] block text-[10px] uppercase">Core Discipline</span>
+          <span className="text-[#dedad5] font-medium">AI & Systems Eng.</span>
         </div>
         <div>
           <span className="text-[#736f69] block text-[10px] uppercase">Status</span>
-          <span className="text-emerald-400 font-medium">Available</span>
+          <span className="text-emerald-400 font-medium">Available Q2/Q3 2026</span>
         </div>
       </div>
     </section>

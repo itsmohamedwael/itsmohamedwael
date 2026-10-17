@@ -3,30 +3,26 @@ name: interactive-character
 description: Engineering specifications for the interactive illustrated character, pointer tracking physics, idle kinematics, and context reactions.
 ---
 
-# Interactive Character Engineering Skill
+# Interactive Character Skill
 
-## 1. Role & Identity
-The character embodies Mohamed Wael's digital alter-ego: sharp, inquisitive, tech-creative, with curly dark hair, alert expressive eyes, and subtle organic posture shifts.
+## When to Use
+Apply this skill when implementing, styling, or animating the 2D illustrated character avatar across the hero, navigation, or contact sections.
 
-## 2. Interaction State Machine
-1. **Idle State**:
-   - Breathing cadence: Subtle `y` oscillation (amplitude `±4px`, period `3.5s`, cubic ease-in-out).
-   - Micro-tilts: Very gentle `rotate` shifts (`±1.5deg`).
-   - Periodic blink: Rapid eyelid close/open every 4–7 seconds with randomized intervals.
-2. **Pointer Tracking**:
-   - Compute normalized offset `(dx, dy)` between character center and cursor viewport coordinates.
-   - Clamp eye pupils translation to a maximum bounding ellipse (e.g., `±7px` horizontal, `±5px` vertical).
-   - Apply head/torso parallax: Subtle rotation (`max ±8deg`) and translation (`max ±10px`) driven by spring interpolation.
-3. **Contextual Hover Reactions**:
-   - Navigation links: Eyes glance upward towards header with slight curious head tilt.
-   - Project cards: Eyes track project media preview and expression brightens.
-   - Contact / CTA: Character presents an inviting wave or nod.
-4. **Click / Tap Feedback**:
-   - Immediate responsive spring squish (`scaleY: 0.94, scaleX: 1.05`) settling back to `1.0` in 280ms.
-5. **Scroll Reactions**:
-   - Shifts position and gaze direction progressively down the page narrative.
+## Implementation Instructions
+1. **Asset Identity & Integrity**:
+   - Preserve Mohamed's authentic illustrated vector character asset. Do not alter facial structure or identity.
+2. **2D Pointer Tracking Physics**:
+   - Track mouse coordinates relative to the avatar container's bounding rectangle.
+   - Calculate normalized displacement (`dx`, `dy`) between `-1.0` and `1.0`.
+   - Apply spring interpolation (`stiffness: 140, damping: 16`) to drive pupil translations (clamped to `±7px` horizontal, `±5px` vertical).
+3. **Autonomous & Contextual Kinematics**:
+   - **Natural Blinking**: Trigger spontaneous blinks at randomized intervals (3.5s–6.5s) using quick vertical eyelid scale (`scaleY: 1 -> 0.1 -> 1` in 140ms).
+   - **Idle Breathing**: Subtle vertical chest/head oscillation (`y: [0, -3px, 0]` over 4s cycle).
+   - **Interactive Feedback**: On button hover or form focus, character's gaze locks onto the target; on direct click, character triggers a quick playful reaction.
+4. **Mobile & Reduced Motion Behavior**:
+   - On touch devices, disable continuous pointer listeners; drive gaze based on page scroll progression or subtle touch taps.
+   - Under `prefers-reduced-motion: reduce`, disable gaze motion and display the character in a serene, static attentive pose.
 
-## 3. Technical Constraints
-- Never cause layout reflows (operate purely via absolute/fixed positioning or within an isolated transform container).
-- Clean up all `mousemove`, `touchmove`, and `IntersectionObserver` listeners upon component unmount.
-- Provide full fallback for mobile (touch gestures, gyroscope if permitted, or autonomous conversational idle) and respect `prefers-reduced-motion`.
+## Completion Criteria
+- Character feels alive, organic, and responsive without distracting from reading comprehension.
+- Performance impact is negligible (< 1ms per frame).

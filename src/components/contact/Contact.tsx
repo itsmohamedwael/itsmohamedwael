@@ -100,7 +100,7 @@ export function Contact() {
                 value={formState.name}
                 onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                 placeholder="Jane Doe"
-                className="w-full rounded-lg border border-[#242220] bg-[#0c0b0a] px-3.5 py-2.5 text-sm text-[#dedad5] placeholder-[#736f69] focus:border-[#dedad5] focus:outline-none transition-colors"
+                className="w-full rounded-lg border border-[#242220] bg-[#100e0b] px-3.5 py-2.5 text-sm text-[#f5f2eb] placeholder-[#736f69] focus:border-[#f5f2eb] focus:outline-none transition-colors"
               />
             </div>
 
@@ -114,7 +114,7 @@ export function Contact() {
                 value={formState.email}
                 onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                 placeholder="jane@company.com"
-                className="w-full rounded-lg border border-[#242220] bg-[#0c0b0a] px-3.5 py-2.5 text-sm text-[#dedad5] placeholder-[#736f69] focus:border-[#dedad5] focus:outline-none transition-colors"
+                className="w-full rounded-lg border border-[#242220] bg-[#100e0b] px-3.5 py-2.5 text-sm text-[#f5f2eb] placeholder-[#736f69] focus:border-[#f5f2eb] focus:outline-none transition-colors"
               />
             </div>
 
@@ -125,7 +125,7 @@ export function Contact() {
               <select
                 value={formState.scope}
                 onChange={(e) => setFormState({ ...formState, scope: e.target.value })}
-                className="w-full rounded-lg border border-[#242220] bg-[#0c0b0a] px-3.5 py-2.5 text-sm text-[#dedad5] focus:border-[#dedad5] focus:outline-none transition-colors"
+                className="w-full rounded-lg border border-[#242220] bg-[#100e0b] px-3.5 py-2.5 text-sm text-[#f5f2eb] focus:border-[#f5f2eb] focus:outline-none transition-colors"
               >
                 <option value="AI Systems Architecture">AI Systems & Autonomous Agents</option>
                 <option value="Full-Stack Web Development">Full-Stack Web Application (Next.js)</option>
@@ -145,13 +145,13 @@ export function Contact() {
                 value={formState.message}
                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                 placeholder="Briefly describe your objectives, timeline, or current challenge..."
-                className="w-full rounded-lg border border-[#242220] bg-[#0c0b0a] px-3.5 py-2.5 text-sm text-[#dedad5] placeholder-[#736f69] focus:border-[#dedad5] focus:outline-none transition-colors resize-none"
+                className="w-full rounded-lg border border-[#242220] bg-[#100e0b] px-3.5 py-2.5 text-sm text-[#f5f2eb] placeholder-[#736f69] focus:border-[#f5f2eb] focus:outline-none transition-colors resize-none"
               />
             </div>
 
             <button
               type="submit"
-              className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-[#dedad5] py-3 text-sm font-medium text-[#0c0b0a] hover:bg-white transition-colors"
+              className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-[#f5f2eb] py-3 text-sm font-medium text-[#100e0b] hover:bg-white transition-colors"
             >
               <span>{submitted ? "Opening Mail Client..." : "Send Inquiry"}</span>
               <Send className="h-4 w-4" />
