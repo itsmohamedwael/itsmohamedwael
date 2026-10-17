@@ -10,14 +10,29 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return projectsData.map((project) => ({
+  const baseParams = projectsData.map((project) => ({
     slug: project.slug,
   }));
+  return [
+    ...baseParams,
+    { slug: "oryveo" },
+    { slug: "clowdy" },
+    { slug: "zen" },
+  ];
 }
 
 export default async function ProjectDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const project = projectsData.find((p) => p.slug === slug);
+  const normalizedSlug =
+    slug === "oryveo"
+      ? "oryveo-restaurant-suite"
+      : slug === "clowdy"
+      ? "clowdy-ai-assistant"
+      : slug === "zen"
+      ? "zen-brand-identity"
+      : slug;
+
+  const project = projectsData.find((p) => p.slug === normalizedSlug);
 
   if (!project) {
     notFound();

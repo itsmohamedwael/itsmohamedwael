@@ -2,17 +2,18 @@
 
 import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { Lock, Unlock, CheckCircle, ArrowRight, ShieldAlert, KeyRound } from "lucide-react";
+import { Lock, Unlock, CheckCircle, ArrowRight, ShieldAlert, KeyRound, Tag, Copy, Check } from "lucide-react";
 
 const VALID_PINS = ["ORY-9842-K9TX-7731", "ORY-9842", "9842"];
 const LAVA_TIP_URL = "https://app.lava.top/products/11a39231-d939-4f57-ad18-23ee8cb5ffb5";
+const PROMO_CODE = "ITSMOHAMEDWAEL2026";
 
 function UnlockContent() {
   const searchParams = useSearchParams();
   const [pin, setPin] = useState("");
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [error, setError] = useState(false);
+  const [copiedCode, setCopiedCode] = useState(false);
 
   useEffect(() => {
     const urlPin = searchParams.get("pin");
@@ -35,6 +36,12 @@ function UnlockContent() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     validatePin(pin);
+  };
+
+  const copyPromoCode = () => {
+    navigator.clipboard.writeText(PROMO_CODE);
+    setCopiedCode(true);
+    setTimeout(() => setCopiedCode(false), 2500);
   };
 
   return (
@@ -64,9 +71,48 @@ function UnlockContent() {
               <h1 className="text-3xl font-bold tracking-tight text-white mb-3">
                 Unlock ORYVEO
               </h1>
-              <p className="text-sm text-neutral-400 mb-8 leading-relaxed">
+              <p className="text-sm text-neutral-400 mb-6 leading-relaxed">
                 Enter the secret verification PIN received on Lava.top after purchase to instantly unlock the private repository and live demo credentials.
               </p>
+
+              {/* Promo Banner */}
+              <div className="mb-6 p-4 rounded-xl border border-[#00D4FF]/30 bg-[#00D4FF]/5 flex flex-col gap-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-xs font-mono text-[#00D4FF] font-semibold">
+                    <Tag className="w-4 h-4" />
+                    <span>PROMO CODE · 50% OFF</span>
+                  </div>
+                  <div className="font-mono text-xs">
+                    <span className="line-through text-neutral-500 mr-2">$20.00</span>
+                    <span className="text-[#00FF88] font-bold text-sm">$10.00</span>
+                  </div>
+                </div>
+                <p className="text-xs text-neutral-400">
+                  Use coupon code at Lava checkout to get 50% off:
+                </p>
+                <div className="flex items-center gap-2">
+                  <div className="flex-1 px-3 py-2 rounded-lg bg-[#030911] border border-neutral-800 font-mono text-xs text-[#00D4FF] font-bold tracking-wider select-all">
+                    {PROMO_CODE}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={copyPromoCode}
+                    className="px-3 py-2 rounded-lg bg-[#00D4FF] hover:bg-[#38E1FF] text-black text-xs font-mono font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
+                  >
+                    {copiedCode ? (
+                      <>
+                        <Check className="w-3.5 h-3.5" />
+                        <span>Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3.5 h-3.5" />
+                        <span>Copy</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -116,7 +162,7 @@ function UnlockContent() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-medium text-[#FF416C] hover:text-[#FF6584] transition-colors"
                 >
-                  Send a tip on Lava.top to receive your PIN <ArrowRight className="w-3.5 h-3.5" />
+                  Purchase on Lava.top ($20 → $10 with code {PROMO_CODE}) <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>
