@@ -31,7 +31,7 @@
   <p align="center">
     <a href="https://www.itsmohamedwael.info"><img src="https://img.shields.io/badge/Portfolio-www.itsmohamedwael.info-00D4FF?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Portfolio" /></a>
     <a href="https://github.com/itsmohamedwael"><img src="https://img.shields.io/badge/GitHub-itsmohamedwael-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-    <a href="mailto:mohamed261207@bue.edu.eg"><img src="https://img.shields.io/badge/Email-Get%20In%20Touch-00FF88?style=for-the-badge&logo=gmail&logoColor=black" alt="Email" /></a>
+    <a href="mailto:mohamedwaellegion@hotmail.com"><img src="https://img.shields.io/badge/Email-Get%20In%20Touch-00FF88?style=for-the-badge&logo=microsoftoutlook&logoColor=black" alt="Email" /></a>
     <a href="https://komarev.com/ghpvc/?username=itsmohamedwael&color=00d4ff&style=for-the-badge"><img src="https://komarev.com/ghpvc/?username=itsmohamedwael&color=00d4ff&style=for-the-badge" alt="Profile Views" /></a>
   </p>
 
@@ -166,8 +166,8 @@
   <a href="https://www.itsmohamedwael.info" target="_blank">
     <img src="https://img.shields.io/badge/Website-www.itsmohamedwael.info-00D4FF?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Website" />
   </a>
-  <a href="mailto:mohamed261207@bue.edu.eg">
-    <img src="https://img.shields.io/badge/Email-mohamed261207@bue.edu.eg-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <a href="mailto:mohamedwaellegion@hotmail.com">
+    <img src="https://img.shields.io/badge/Email-mohamedwaellegion@hotmail.com-0078D4?style=for-the-badge&logo=microsoftoutlook&logoColor=white" alt="Email" />
   </a>
   <a href="https://github.com/itsmohamedwael">
     <img src="https://img.shields.io/badge/GitHub-Follow%20@itsmohamedwael-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
