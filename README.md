@@ -68,21 +68,21 @@
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">💼 <a href="https://itsmohamedwael.info">ORYVEO — POS &amp; Growth Suite</a></h3>
+      <h3 align="center">💼 <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info">ORYVEO — POS &amp; Growth Suite</a></h3>
       <p align="center">
-        <img src="https://img.shields.io/badge/Next.js%2015-React%2019-white?style=flat-square&logo=next.js" />
+        <img src="https://img.shields.io/badge/Status-🔒%20Locked%20(Tip%20Required)-FF416C?style=flat-square&logo=kofi&logoColor=white" />
         <img src="https://img.shields.io/badge/TypeScript-Full--Stack-3178C6?style=flat-square&logo=typescript" />
       </p>
       <p>
-        Enterprise-grade Restaurant Point-of-Sale (POS) and Kitchen Display System (KDS) engineered for ultra-fast order processing, synchronized inventory management, and intelligent kitchen analytics.
+        Enterprise Restaurant Point-of-Sale (POS) and Kitchen Display System (KDS) engineered for ultra-fast order processing, synchronized inventory management, and intelligent kitchen analytics.
       </p>
       <ul>
         <li>⚡ <b>Real-Time Sync:</b> Zero-latency order routing via WebSockets.</li>
         <li>📊 <b>Operations:</b> Real-time kitchen load balancing and revenue analytics.</li>
-        <li>🎨 <b>Interface:</b> Touch-optimized glassmorphic dark UI.</li>
+        <li>🔒 <b>Access Control:</b> Proprietary code &amp; live demo sandbox are locked. <b>Cannot unlock except by sending a tip.</b></li>
       </ul>
       <p align="center">
-        <a href="https://itsmohamedwael.info"><b>View Case Study ➔</b></a>
+        <a href="https://app.lava.top/products/86bc031d-daf3-4abe-b82e-1d4e4f78007d/aea15568-4401-4703-9bd6-5ec233591abe?currency=USD&domainId=8c375986-88a5-4505-b605-00a922d60999&domainName=itsmohamedwael.info"><b>🔒 Send a Tip on Lava.top to Unlock Access ➔</b></a>
       </p>
     </td>
   </tr>
@@ -101,16 +101,16 @@
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">👕 <a href="https://itsmohamedwael.info">ZEN Local Brand — E-Commerce</a></h3>
+      <h3 align="center">👕 <a href="https://zenlocalbrand.shop">ZEN Local Brand — E-Commerce</a></h3>
       <p align="center">
-        <img src="https://img.shields.io/badge/E--Commerce-Shopify%20%2F%20Custom-96BF48?style=flat-square&logo=shopify" />
+        <img src="https://img.shields.io/badge/Store-zenlocalbrand.shop-00D4FF?style=flat-square&logo=shopify" />
         <img src="https://img.shields.io/badge/UI%2FUX-Design%20System-FF61F6?style=flat-square&logo=figma" />
       </p>
       <p>
         Bespoke digital storefront and brand identity for a premium streetwear label, designed for rapid conversion, micro-interactions, and visual storytelling.
       </p>
       <p align="center">
-        <a href="https://itsmohamedwael.info"><b>View Brand Project ➔</b></a>
+        <a href="https://zenlocalbrand.shop"><b>Visit zenlocalbrand.shop ➔</b></a>
       </p>
     </td>
   </tr>
